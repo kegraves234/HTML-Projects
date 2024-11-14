@@ -23,3 +23,27 @@ header{
     text-align: center;
     padding: 10px;
 }
+
+.lesson {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chapter {
+    margin-left: 20px;
+}
+
+.chapter h4 {
+    color: #4CAF50; /* Customize to your preferred color */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+
