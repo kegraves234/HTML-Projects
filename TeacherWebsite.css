@@ -1,0 +1,25 @@
+.ClassLinks{
+    text-align: center;
+   
+}
+.ClassLinks nav{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 20px 0;
+}
+.ClassLinks nav button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid #fa6406;
+    background-color: #edf88c;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+.ClassLinks nav button:hover {
+    background-color: #c6f312;
+}
+header{
+    text-align: center;
+    padding: 10px;
+}

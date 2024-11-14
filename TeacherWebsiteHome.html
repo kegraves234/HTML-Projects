@@ -9,30 +9,33 @@
 <body>
     <header>
         <h1>Weekly Lesson Plans</h1>
+        <div class = "ClassLinks">
         <nav>
-            <a href="#python">Python Programming</a>
-            <a href="#cs-discoveries">Computer Science Discoveries</a>
-            <a href="#ap-csp">AP CSP</a>
+            <button onclick ="showTab('pthon')">Python Programming</button>
+            <button onclick = "showTab('cs-discoveries')">Computer Science Discoveries</button>
+            <button onclick = "showTab('ap-csp')">AP CSP</button>
         </nav>
+        </div>
     </header>
 
-    <section id="python">
+    <section id="python" class="tab-content">
         <h2>Python Programming</h2>
         <!-- Add links or upload weekly lesson plans here -->
     </section>
 
-    <section id="cs-discoveries">
+    <section id="cs-discoveries" class="tab-content" style="display: none;">
         <h2>Computer Science Discoveries</h2>
         <!-- Add weekly lesson plan links here -->
     </section>
 
-    <section id="ap-csp">
+    <section id="ap-csp" class="tab-content" style="display: none;">
         <h2>AP Computer Science Principles</h2>
         <!-- Add weekly lesson plan links here -->
     </section>
-
-    <footer>
+    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&src=a2VncjIzNDVAZ21haWwuY29t&src=MmI5MjcyMzU0MmQ2NGZkYzczMjMzNThhNzc3YTg5NWNmM2IwMDNiYWZlM2RiOWViYTgyMzMwZTdiOWM3ZDg1N0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=NTIzZTgyMDliNDgzODlkNjI5NGE1NTc0ODA2ZWVhMDE4NmVkNmViYmE4YjM0NTczMjAzMDNkNDhlZmMwZTYzYkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%23F09300&color=%2333B679&color=%23EF6C00&color=%230B8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>    <footer>
         <p>&copy; 2024 Kyle Graves</p>
     </footer>
+
+    <script src = "TeacherWebsite.js"></script>
 </body>
 </html>
