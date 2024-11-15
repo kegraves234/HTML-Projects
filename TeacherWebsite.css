@@ -1,37 +1,109 @@
-.ClassLinks{
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #c5f5fc;
+    color: #333;
+    
+}
+
+header {
+    background-color: #023844;
+    color: white;
+    padding: 20px;
     text-align: center;
-   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.ClassLinks nav{
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin: 20px 0;
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
 }
-.ClassLinks nav button {
-    padding: 10px 20px;
+h2{
+    text-align: center;
+}
+.CSD_Overview{
+    text-align: center;
+    margin-Left: 25%;
+    margin-right: 25%;
+}
+
+.ClassLinks {
+    margin-top: 10px;
+}
+
+.ClassLinks button {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
     cursor: pointer;
-    border: 1px solid #fa6406;
-    background-color: #edf88c;
-    font-size: 16px;
+    margin: 5px;
     transition: background-color 0.3s ease;
 }
-.ClassLinks nav button:hover {
-    background-color: #c6f312;
+
+.ClassLinks button:hover {
+    background-color: #e68a00;
 }
-header{
+
+/* Main Content */
+main {
+    padding: 20px;
     text-align: center;
-    padding: 10px;
-}
-body{
-    margin: 30px;
 }
 .home{
     text-align: center;
 }
 
+.home h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #4CAF50;
+    
+}
+
+.calendar {
+    border: 1px solid #69f5af;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(245, 3, 3, 0.934);
+    width: 90%;
+    max-width: 800px;
+    height: 600px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .ClassLinks button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    .calendar {
+        width: 100%;
+        height: 500px;
+    }
+}
+
+
 .lesson {
-    background-color: #f9f9f9;
+    background-color: #c5f5fc;
     padding: 5px;
     margin: 5px 0;
     border-radius: 8px;
@@ -56,13 +128,11 @@ ul {
 
 .unit h3, .chapter h4, .lesson h5 {
     cursor: pointer;
-    
-    
-    align-items: left;
-    background-color: #f1f1f1;
+    background-color: #c5f5fc;
     padding: 5px;
-    border-radius: 5px;
-    font-weight: bold;
+    margin: 5px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 

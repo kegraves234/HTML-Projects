@@ -23,7 +23,7 @@
         
     </section>
 
-    <section id="lesson-overview">
+    <section id="lesson-overview" class = "CSD_Overview">
         <h2>Overview of Computer Science Discoveries</h2>
         <p>Welcome to the Computer Science Discoveries course! Here, you'll find a breakdown of weekly lessons, 
             each designed to build a solid foundation in a wide variety of computer science topics. 
@@ -233,7 +233,7 @@
                 
         
 
-<!-- Chapter 2: Multi-page Websites -->
+            <!-- Chapter 2: Multi-page Websites -->
         
             <h4 onclick="toggleSection(this)">Chapter 2: Multi-page Websites <span class="toggle-icon">▼</span></h4>
             <div class = "lesson" style = "display: none;">
@@ -296,40 +296,138 @@
 
     </div>
             
-    
-        <!-- Unit 3: Animations and Games -->
-        <div class="lesson">
-            <h3>Unit 3: Animations and Games</h3>
-            <!-- Chapter 1: Drawing with Code -->
-            <div class="chapter">
-                <h4>Chapter 1: Drawing with Code</h4>
-                <ul>
-                    <li><strong>Lesson 1:</strong> Introduction to Game Development
+    <!--Unit 3: Interactive Animations and Games-->
+    <div class="unit">
+        <h3 onclick="toggleSection(this)">
+            Unit 3: Interactive Animations and Games
+            <span class="toggle-icon">▼</span></h3>
+            <div class="chapter" style="display: none;">
+                <h4 onclick="toggleSection(this)">Chapter 1: Images and Animations <span class="toggle-icon">▼</span></h4>
+                <div class = "lesson" style = "display:none;">
+                    <!-- Lesson 1 -->
+                    <h5 onclick="toggleSection(this)">Lesson 1: Programming for a Purpose <span class="toggle-icon">▼</span></h5>
+                    <div class="lesson-details" style="display: none;">
+                        <p><strong>Question of the Day:</strong> How can we design animations and games based on the needs of a user?</p>
+                        <p>Students investigate and prototype animations and game designs for different users, concluding with a discussion on what it means to be a designer.</p>
                         <a href="unit3_chapter1_lesson1.pdf" download>Download Lesson Plan (PDF)</a>
-                    </li>
-                    <li><strong>Lesson 2:</strong> Basic Shapes
+                    </div>
+                
+                    <!-- Lesson 2 -->
+                    <h5 onclick="toggleSection(this)">Lesson 2: Plotting Shapes <span class="toggle-icon">▼</span></h5>
+                    <div class="lesson-details" style="display: none;">
+                        <p><strong>Question of the Day:</strong> How can we clearly communicate how to draw something on a screen?</p>
+                        <p>Students explore Game Lab's coordinate system, using shapes to create images and communicating drawing instructions with partners.</p>
                         <a href="unit3_chapter1_lesson2.pdf" download>Download Lesson Plan (PDF)</a>
-                    </li>
-                </ul>
+                    </div>
+                
+                    <!-- Lesson 3 -->
+                    <h5 onclick="toggleSection(this)">Lesson 3: Drawing in Game Lab <span class="toggle-icon">▼</span></h5>
+                    <div class="lesson-details" style="display: none;">
+                        <p><strong>Question of the Day:</strong> How can we communicate to a computer how to draw shapes on the screen?</p>
+                        <p>Students explore Game Lab's development environment, learning basic shape-drawing commands and debugging techniques.</p>
+                        <a href="unit3_chapter1_lesson3.pdf" download>Download Lesson Plan (PDF)</a>
+                    </div>
+                
+                    <!-- Lesson 4 -->
+                    <h5 onclick="toggleSection(this)">Lesson 4: Shapes and Parameters <span class="toggle-icon">▼</span></h5>
+                    <div class="lesson-details" style="display: none;">
+                        <p><strong>Question of the Day:</strong> How can we use parameters to give the computer more specific instructions?</p>
+                        <p>Students manipulate shapes by adjusting width, height, and positioning parameters to increase the complexity of their drawings.</p>
+                        <a href="unit3_chapter1_lesson4.pdf" download>Download Lesson Plan (PDF)</a>
+                    </div>
+                
+                    <!-- Lesson 5 -->
+                    <h5 onclick="toggleSection(this)">Lesson 5: Variables <span class="toggle-icon">▼</span></h5>
+                    <div class="lesson-details" style="display: none;">
+                        <p><strong>Question of the Day:</strong> How can we use variables to store information in our programs?</p>
+                        <p>Students explore variables as a way to label values, understanding how they store and reuse data within programs.</p>
+                        <a href="unit3_chapter1_lesson5.pdf" download>Download Lesson Plan (PDF)</a>
+                    </div>
+
+                    <!-- Lesson 6 -->
+                    <h5 onclick="toggleSection(this)">Lesson 6: Random Numbers <span class="toggle-icon">▼</span></h5>
+                    <div class="lesson-details" style="display: none;">
+                        <p><strong>Question of the Day:</strong> How can we make our programs behave differently each time they are run?</p>
+                        <p>Students learn to use the randomNumber() block to introduce variability and randomness in their programs.</p>
+                        <a href="unit3_chapter1_lesson6.pdf" download>Download Lesson Plan (PDF)</a>
+                    </div>
+
+                    <!-- Lesson 7 -->
+                    <h5 onclick="toggleSection(this)">Lesson 7: Mini-Project - Robot Faces <span class="toggle-icon">▼</span></h5>
+                    <div class="lesson-details" style="display: none;">
+                        <p><strong>Question of the Day:</strong> How can we use shapes, variables, and randomness to express our creativity?</p>
+                        <p>Students apply their knowledge to design and code a robot face using shapes, variables, and randomness in Game Lab.</p>
+                        <a href="unit3_chapter1_lesson7.pdf" download>Download Lesson Plan (PDF)</a>
+                    </div>
+
+                    <!-- Lesson 8 -->
+                    <h5 onclick="toggleSection(this)">Lesson 8: Sprites <span class="toggle-icon">▼</span></h5>
+                    <div class="lesson-details" style="display: none;">
+                        <p><strong>Question of the Day:</strong> How can we use sprites to help us keep track of lots of information in our programs?</p>
+                        <p>Students learn to use sprites as objects that combine shape and properties for more complex images and animations.</p>
+                        <a href="unit3_chapter1_lesson8.pdf" download>Download Lesson Plan (PDF)</a>
+                    </div>
+
+                    <!-- Lesson 9 -->
+                    <h5 onclick="toggleSection(this)">Lesson 9: Sprite Properties <span class="toggle-icon">▼</span></h5>
+                    <div class="lesson-details" style="display: none;">
+                        <p><strong>Question of the Day:</strong> How can we use sprite properties to change their appearance on the screen?</p>
+                        <p>Students explore sprite properties and how they can be modified during program execution to create dynamic effects.</p>
+                        <a href="unit3_chapter1_lesson9.pdf" download>Download Lesson Plan (PDF)</a>
+                    </div>
+
+                    <!-- Lesson 10 -->
+                    <h5 onclick="toggleSection(this)">Lesson 10: Text <span class="toggle-icon">▼</span></h5>
+                    <div class="lesson-details" style="display: none;">
+                        <p><strong>Question of the Day:</strong> How can we use text to improve our scenes and animations?</p>
+                        <p>Students practice placing and styling text on the screen, using parameters to control text properties like size and position.</p>
+                        <a href="unit3_chapter1_lesson10.pdf" download>Download Lesson Plan (PDF)</a>
+                    </div>
+
+                    <!-- Lesson 11 -->
+                    <h5 onclick="toggleSection(this)">Lesson 11: Mini-Project - Captioned Scenes <span class="toggle-icon">▼</span></h5>
+                    <div class="lesson-details" style="display: none;">
+                        <p><strong>Question of the Day:</strong> How can we use Game Lab to express our creativity?</p>
+                        <p>Students use shapes, text, and sprites to design and program a captioned scene in Game Lab, showcasing their creativity.</p>
+                        <a href="unit3_chapter1_lesson11.pdf" download>Download Lesson Plan (PDF)</a>
+                    </div>
+
+                    <!-- Lesson 12 -->
+                    <h5 onclick="toggleSection(this)">Lesson 12: The Draw Loop <span class="toggle-icon">▼</span></h5>
+                    <div class="lesson-details" style="display: none;">
+                        <p><strong>Question of the Day:</strong> How can we animate our images in Game Lab?</p>
+                        <p>Students learn how the draw loop works to create animation, updating the screen repeatedly to simulate motion.</p>
+                        <a href="unit3_chapter1_lesson12.pdf" download>Download Lesson Plan (PDF)</a>
+                    </div>
+
+                    <!-- Lesson 13 -->
+                    <h5 onclick="toggleSection(this)">Lesson 13: Sprite Movement <span class="toggle-icon">▼</span></h5>
+                    <div class="lesson-details" style="display: none;">
+                        <p><strong>Question of the Day:</strong> How can we control sprite movement in Game Lab?</p>
+                        <p>Students use the counter pattern to control sprite movement and explore techniques for purposeful animations.</p>
+                        <a href="unit3_chapter1_lesson13.pdf" download>Download Lesson Plan (PDF)</a>
+                    </div>
+
+                    <!-- Lesson 14 -->
+                    <h5 onclick="toggleSection(this)">Lesson 14: Mini-Project - Animation <span class="toggle-icon">▼</span></h5>
+                    <div class="lesson-details" style="display: none;">
+                        <p><strong>Question of the Day:</strong> How can we combine different programming patterns to make a complete animation?</p>
+                        <p>Students create animated scenes by combining multiple programming techniques, culminating in a creative project.</p>
+                        <a href="unit3_chapter1_lesson14.pdf" download>Download Lesson Plan (PDF)</a>
+                    </div>
+                </div>
+                <h4 onclick="toggleSection(this)">Chapter 2: Building Games <span class="toggle-icon">▼</span></h4>
+                <div class = "lesson" style = "display:none;">
+
+                </div>   
             </div>
             
-            <!-- Chapter 2: Creating Animations -->
-            <div class="chapter">
-                <h4>Chapter 2: Creating Animations</h4>
-                <ul>
-                    <li><strong>Lesson 3:</strong> Animation Basics
-                        <a href="unit3_chapter2_lesson3.pdf" download>Download Lesson Plan (PDF)</a>
-                    </li>
-                    <li><strong>Lesson 4:</strong> Movement and Control
-                        <a href="unit3_chapter2_lesson4.pdf" download>Download Lesson Plan (PDF)</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    
     
         <!-- Unit 4: The Design Process -->
-        <div class="lesson">
-            <h3>Unit 4: The Design Process</h3>
+        <h3 onclick="toggleSection(this)">
+            Unit 4: The Design Process
+            <span class="toggle-icon">▼</span></h3>
             <!-- Continue similarly for Unit 4 and so forth... -->
     
         </div>
