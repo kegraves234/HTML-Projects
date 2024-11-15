@@ -25,3 +25,4 @@ function toggleSection(header) {
         icon.textContent = "▼"; // Change icon back to a down arrow when collapsed
     }
 }
+

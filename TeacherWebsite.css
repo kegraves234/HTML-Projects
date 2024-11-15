@@ -23,26 +23,64 @@ header{
     text-align: center;
     padding: 10px;
 }
+body{
+    margin: 30px;
+}
+.home{
+    text-align: center;
+}
 
 .lesson {
     background-color: #f9f9f9;
-    padding: 15px;
-    margin: 15px 0;
+    padding: 5px;
+    margin: 5px 0;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .chapter {
-    margin-left: 20px;
+    margin-left: 5px;
 }
 
 .chapter h4 {
-    color: #4CAF50; /* Customize to your preferred color */
+    color: #fa6406; /* Customize to your preferred color */
 }
 
 ul {
     list-style-type: none;
     padding: 0;
+}
+.unit, .chapter, .lesson {
+    margin: 5px 0;
+}
+
+.unit h3, .chapter h4, .lesson h5 {
+    cursor: pointer;
+    
+    
+    align-items: left;
+    background-color: #f1f1f1;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+.toggle-icon {
+    font-size: 14px;
+    transition: transform 0.3s;
+}
+
+.chapter, .lesson-details {
+    display: none; /* All chapters and lesson details start collapsed */
+}
+
+.lesson {
+    padding-left: 20px;
+}
+
+.lesson-details {
+    padding-left: 40px;
 }
 
 
