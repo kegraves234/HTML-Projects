@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional About Me Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            font-family: "Great Vibes", "Comic Sans", cursive;
+            background-color: #ffb432;
+            color: rgb(3, 14, 137);
+            padding: 20px;
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        nav {
+            background-color: rgb(3, 14, 137);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: #ffb432;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            background-color: #ffb432;
+            color: rgb(3, 14, 137);
+            border-radius: 5px;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .profile-pic {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(3, 14, 137);
+        }
+
+        .about-me {
+            background-color: #ffb432;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 15px rgb(3, 14, 137);
+            margin-top: 20px;
+        }
+
+        .about-me p {
+            line-height: 1.6;
+            font-size: 1.2em;
+            color: rgb(3, 14, 137);
+            text-align: center;
+        }
+
+        .fun-facts {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .fun-fact {
+            background-color: #ffeb3b;
+            padding: 20px;
+            border-radius: 5px;
+            width: 30%;
+            text-align: center;
+        }
+
+        .fun-fact h3 {
+            color: rgb(3, 14, 137);
+            margin-bottom: 15px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .buttons button {
+            background-color: rgb(3, 14, 137);
+            color: #ffb432;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            margin: 0 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .buttons button:hover {
+            background-color: #ffb432;
+            color: rgb(3, 14, 137);
+        }
+
+        .projects {
+            margin-top: 40px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgb(3, 14, 137);
+        }
+
+        .project {
+            font-family: "Good Vibes", cursive;
+            border-bottom: 1px solid rgb(3, 14, 137);
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        .project:last-child {
+            border-bottom: none;
+        }
+
+        .project h3 {
+            color: rgb(3, 14, 137);
+            font-size: 1.5em;
+        }
+
+        .project p {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .project a {
+            color: #ffb432;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffb432;
+            color: rgb(3, 14, 137);
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Welcome to Mr. Graves' About Me Webpage!
+</header>
+
+<!-- Navigation Tabs -->
+<nav>
+    <a href="#about">About Me</a>
+    <a href="#fun-facts">Fun Facts</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+    <!-- About Me Section -->
+    <section id="about">
+        <img src="/Users/kylegraves/Documents/CODE/IMG_0011.jpeg" alt="Profile Picture" class="profile-pic">
+        <h2>Hello, I'm Mr. Graves!</h2>
+        <div class="about-me">
+            <p>
+                I'm a computer science teacher who loves coding, teaching, and helping others solve problems.
+                When I'm not programming, you can find me exploring nature, playing NBA2K, or experimenting with new technologies.
+            </p>
+        </div>
+    </section>
+
+    <!-- Fun Facts Section -->
+    <section id="fun-facts">
+        <h2 style="text-align: center; color: rgb(3, 14, 137);">Fun Facts</h2>
+        <div class="fun-facts">
+            <div class="fun-fact">
+                <h3>Favorite Language</h3>
+                <p>Python 🐍</p>
+            </div>
+            <div class="fun-fact">
+                <h3>Hobby</h3>
+                <p>Hiking 🏞️</p>
+            </div>
+            <div class="fun-fact">
+                <h3>Secret Skill</h3>
+                <p>Photography 📸</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2 style="text-align: center; color: rgb(3, 14, 137);">Projects</h2>
+
+        <div class="project">
+            <div>
+                <h3>Personal Portfolio Website</h3>
+                <p>This is a personal portfolio website where I showcase my skills and projects. It is built using HTML, CSS, and JavaScript.</p>
+                <a href="https://github.com/kegraves234/HTML-Projects/blob/main/PersonalPortfolio.html" target="_blank">View on GitHub</a>
+            </div>
+            <button onclick="window.location.href='file:///Users/kylegraves/Documents/CODE/HTMLandCSS/PersonalPortfolio.html';">Go to Website</button>
+        </div>
+
+        <div class="project">
+            <div>
+                <h3>Weather App</h3>
+                <p>A simple weather forecasting app that fetches data from a weather API and displays current weather information for any city.</p>
+                <a href="https://github.com/kegraves234/HTML-Projects/blob/main/WeatherApp.html" target="_blank">View on GitHub</a>
+            </div>
+            <button onclick="window.location.href='file:///Users/kylegraves/Documents/CODE/HTMLandCSS/WeatherApp.html';">Go to Website</button>
+        </div>
+
+        <div class="project">
+            <h3>Task Manager</h3>
+            <p>A task management app that allows users to create, update, and delete tasks. Built using Python and Flask for the backend.</p>
+            <a href="https://github.com/kegraves234/Python-Code/tree/main/Python/TaskManager" target="_blank">View on GitHub</a>
+        </div>
+        <button onclick="window.location.href='http://127.0.0.1:5000';">Go to Website</button>
+    </div>
+    </section>
+
+    <!-- Action Buttons -->
+    <div class="buttons">
+        <button onclick="alert('Contact me at: kyle.graves@corvian.org')">Contact Me</button>
+        <button onclick="window.location.href='#projects';">View Projects</button>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    Made with ❤️ by Kyle Graves
+</footer>
+
+</body>
+</html>
+
