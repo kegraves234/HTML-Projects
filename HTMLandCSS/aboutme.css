@@ -1,0 +1,177 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    font-family: "Great Vibes", "Comic Sans", cursive;
+    background-color: #ffb432;
+    color: rgb(3, 14, 137);
+    padding: 20px;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+nav {
+    background-color: rgb(3, 14, 137);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: #ffb432;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    background-color: #ffb432;
+    color: rgb(3, 14, 137);
+    border-radius: 5px;
+}
+.ClassLinks {
+    margin-top: 10px;
+}
+
+.ClassLinks button {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.ClassLinks button:hover {
+    background-color: #e68a00;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 20px auto;
+}
+
+h2 {
+    text-align: center;
+    color: rgb(3, 14, 137);
+}
+
+.about-me {
+    background-color: #ffb432;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgb(3, 14, 137);
+    margin-top: 20px;
+}
+
+.about-me p {
+    line-height: 1.6;
+    font-size: 1.2em;
+    color: rgb(3, 14, 137);
+    text-align: center;
+}
+
+.fun-facts {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.fun-fact {
+    background-color: #ffeb3b;
+    padding: 20px;
+    border-radius: 5px;
+    width: 30%;
+    text-align: center;
+}
+
+.fun-fact h3 {
+    color: rgb(3, 14, 137);
+    margin-bottom: 15px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.buttons button {
+    background-color: rgb(3, 14, 137);
+    color: #ffb432;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #ffb432;
+    color: rgb(3, 14, 137);
+}
+
+.projects {
+    margin-top: 40px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgb(3, 14, 137);
+}
+
+.project {
+    font-family: "Good Vibes", cursive;
+    border-bottom: 1px solid rgb(3, 14, 137);
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.project:last-child {
+    border-bottom: none;
+}
+
+.project h3 {
+    color: rgb(3, 14, 137);
+    font-size: 1.5em;
+}
+
+.project p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.project a {
+    color: #ffb432;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffb432;
+    color: rgb(3, 14, 137);
+    margin-top: 40px;
+}

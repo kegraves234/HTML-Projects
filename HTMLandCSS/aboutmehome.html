@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="TeacherWebsite.css">
+    <link rel="stylesheet" href="aboutme.css">
     <title>Professional About Me Portfolio</title> 
 </head>
 <body>
 
 <header>
     Welcome to Mr. Graves' About Me Webpage!
+    <button onclick="window.location.href='TeacherWebsiteHome.html'">Home Page</button>
 </header>
 
 <!-- Navigation Tabs -->
@@ -57,30 +58,25 @@
         <h2 style="text-align: center; color: rgb(3, 14, 137);">Projects</h2>
 
         <div class = "ClassLinks">
-            <nav>
+            <div class = "project">
                 <h3>Personal Portfolio Website</h3>
                 <p>This is a personal portfolio website where I showcase my skills and projects. It is built using HTML, CSS, and JavaScript.</p>
-                <button onclick="window.location.href = 'HTMLandCSS/PersonalPortfolio.html'">Go to Website</button>
-            </nav>
-        </div>
-            <button onclick="window.location.href='file:///Users/kylegraves/Documents/CODE/HTMLandCSS/PersonalPortfolio.html';">Go to Website</button>
-        </div>
-        /HTML-Projects/HTMLandCSS/aboutmehome.html
-        <div class="project">
-            <div>
+                <button onclick="window.location.href = 'PersonalPortfolio.html'">Go to Website</button>
+            </div>
+            <div class="project">
                 <h3>Weather App</h3>
                 <p>A simple weather forecasting app that fetches data from a weather API and displays current weather information for any city.</p>
-                <button onclick="window.location.href = 'HTMLandCSS/PersonalPortfolio.html'"></button>
+                <button onclick="window.location.href = 'WeatherApp.html'">Go to Website</button>
             </div>
-            <button onclick="window.location.href='HTMLandCSS/PersonalPortfolio.html';">Go to Website</button>
-        </div>
+            
+        
 
-        <div class="project">
-            <h3>Task Manager</h3>
-            <p>A task management app that allows users to create, update, and delete tasks. Built using Python and Flask for the backend.</p>
-            <a href="HTMLandCSS/PersonalPortfolio.html" target="_blank">View on GitHub</a>
-        </div>
-        <button onclick="window.location.href='http://127.0.0.1:5000';">Go to Website</button>
+            <div class="project">
+                <h3>Task Manager</h3>
+                <p>A task management app that allows users to create, update, and delete tasks. Built using Python and Flask for the backend.</p>
+                <button onclick="window.location.href='http://127.0.0.1:5000';">Go to Website</button>
+            </div>
+        
     </div>
     </section>
 
@@ -91,6 +87,7 @@
     </div>
 
 </div>
+<script src = "TeacherWebsite.js"></script>
 
 <!-- Footer -->
 <footer>
