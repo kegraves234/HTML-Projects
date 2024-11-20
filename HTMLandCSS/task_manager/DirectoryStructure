@@ -1,4 +1,4 @@
-task-manager/
+task_manager/
 ├── app.py
 ├── templates/
 │   └── index.html
