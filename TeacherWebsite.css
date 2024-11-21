@@ -130,8 +130,8 @@ main {
 }
 /* Welcome Banner Styling */
 .welcome-banner {
-    background: linear-gradient(to right, #4CAF50, #039BE5);
-    /*.background: url('banner_image.jpg') center/cover no-repeat; */
+    background: linear-gradient(to right, #4CAF50, #039BE5),
+                url('codeworkspacebackground.jpg') center/cover no-repeat; 
     color: white;
     padding: 50px 20px;
     text-align: center;
