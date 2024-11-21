@@ -4,18 +4,23 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #c5f5fc;
-    color: #333;
     
+    background: rgb(197, 245, 252); /* Fallback */
+    background: linear-gradient(to top right, #6ee7f9, #ffffff),
+                url('codeworkspacebackground.jpg') center/cover no-repeat;
+    color: #333;
 }
 
+
 header {
-    background-color: #023844;
+    background: linear-gradient(to bottom, #023844, #035059);
     color: white;
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid #FF9800; /* Optional accent */
 }
+
 
 header h1 {
     margin: 0;
@@ -34,21 +39,44 @@ h2{
     margin-top: 10px;
 }
 
-.ClassLinks button {
-    background-color: #ff9800;
+/* Styling for Buttons Inside the Banner */
+.ClassLinks nav button {
+    background-color: #FF9800;
     color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
+    padding: 10px 20px;
     margin: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.ClassLinks button:hover {
+.ClassLinks nav button:hover {
     background-color: #e68a00;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
+
+.toggle-icon {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.chapter h4:hover .toggle-icon,
+.lesson h5:hover .toggle-icon {
+    transform: scale(1.2);
+}
+
+.chapter.open h4 .toggle-icon,
+.lesson.open h5 .toggle-icon {
+    transform: rotate(180deg); /* Rotate when expanded */
+}
+
+
+
 .search-bar {
     text-align: center;
     margin: 20px auto;
@@ -70,6 +98,9 @@ h2{
 }
 .search-bar button:hover {
     background-color: #e68a00;
+}
+.home{
+    text-align: center;
 }
 .upcoming-events {
     background-color: #f9f9f9;
@@ -118,9 +149,8 @@ main {
     padding: 20px;
     text-align: center;
 }
-.home{
-    text-align: center;
-}
+
+
 
 .home h2 {
     font-size: 1.5rem;
@@ -128,16 +158,20 @@ main {
     color: #4CAF50;
     
 }
-/* Welcome Banner Styling */
+/* General Welcome Banner Styling */
 .welcome-banner {
-    background: linear-gradient(to right, #4CAF50, #039BE5),
-                url('codeworkspacebackground.jpg') center/cover no-repeat; 
+    background: linear-gradient(to right, rgba(76, 175, 80, 0.7), rgba(3, 155, 229, 0.7)), 
+                url('codeworkspacebackground.jpg') center/cover no-repeat;
     color: white;
     padding: 50px 20px;
     text-align: center;
     position: relative;
     overflow: hidden;
+    border-radius: 8px;
+    margin: 20px auto;
 }
+
+
 
 .welcome-banner::after {
     content: '';
@@ -146,16 +180,21 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.3); /* Black overlay with transparency */
     z-index: 1;
 }
 
 .welcome-content {
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Ensures content is above the overlay */
     max-width: 800px;
     margin: 0 auto;
 }
+
+
+
+/* Specific Background for Home Page */
+
 
 
 
@@ -235,7 +274,7 @@ main {
     transition: color 0.3s;
 }
 .quick-links a:hover {
-    color: #e68a00;
+    color: #fa9601;
 }
 
 
@@ -309,10 +348,7 @@ ul {
 }
 
 
-.toggle-icon {
-    font-size: 14px;
-    transition: transform 0.3s;
-}
+
 
 .chapter, .lesson-details {
     display: none; /* All chapters and lesson details start collapsed */
