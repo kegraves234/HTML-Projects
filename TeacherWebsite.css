@@ -157,14 +157,13 @@ main {
     margin: 0 auto;
 }
 
-/*.welcome-banner h1 {
+
+
+.welcome-banner h1 {
+    animation: fadeIn 1s ease-in-out;
     font-size: 2.5rem;
     margin-bottom: 20px;
     font-family: 'Roboto', sans-serif;
-}
-*/
-.welcome-banner h1 {
-    animation: fadeIn 1s ease-in-out;
 }
 
 @keyframes fadeIn {
