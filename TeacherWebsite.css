@@ -668,7 +668,7 @@ ul {
     margin: 5px 0;
 }
 
-.unit h3, .chapter h4, .lesson h5 {
+.unit h3, .chapter h4, .lesson h5, .lesson-details {
     cursor: pointer;
     background-color: #c5f5fc;
     padding: 15px;

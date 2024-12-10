@@ -4,6 +4,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const homeElement = document.querySelector('.home');
     const calendarElement = document.querySelector('.calendar');
     const headers = document.querySelectorAll('.unit h3, .chapter h4, .lesson h5');
+    const resetButton = document.getElementById('resetProgress');
+    if (resetButton) {
+        resetButton.addEventListener('click', resetProgress);
+    }
+
+    function resetProgress() {
+        if (confirm("Are you sure you want to reset all progress? This cannot be undone.")) {
+            // Clear localStorage
+            localStorage.clear();
+
+            // Uncheck all checkboxes on the page
+            const checkboxes = document.querySelectorAll('.lesson-details input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = false;
+            });
+
+            alert("Progress has been reset.");
+        }
+    }
     headers.forEach(header => {
         header.addEventListener('click', () => toggleSection(header));
     });
@@ -245,6 +264,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     loadLessons('lessons-list-CSD', 'CSD/CSD_Lessons.csv');
+
+    
 });
 
 
