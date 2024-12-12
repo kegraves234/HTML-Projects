@@ -123,42 +123,125 @@ document.addEventListener('DOMContentLoaded', () => {
                 lessonDetails.className = 'lesson-details';
                 lessonDetails.style.display = 'none';
 
-                // Add a checkbox
+                /////////////////////////////////// Add a Checkbox
                 const checkbox = document.createElement('input');
                 checkbox.type = 'checkbox';
                 checkbox.id = `${lesson.Unit}-${lesson.Chapter}-${lesson.Lesson}`;
                 checkbox.checked = localStorage.getItem(checkbox.id) === 'true';
                 checkbox.addEventListener('change', saveProgress);
 
-                const label = document.createElement('label');
-                label.textContent = lesson.Description;
-                label.style.marginLeft = '10px'; // Add spacing
-                lessonDetails.appendChild(checkbox);
-                lessonDetails.appendChild(label);
+                if (lesson.Description || lesson.Objectives) {
+                    // Create a flex container to hold Description and Objectives side by side
+                    const descriptionObjectivesContainer = document.createElement('div');
+                    descriptionObjectivesContainer.className = 'description-objectives-container';
 
-                // Add materials if provided
-                
+                    // Description Section
+                    if (lesson.Description) {
+                        const descriptionDiv = document.createElement('div');
+                        descriptionDiv.className = 'lesson-description';
+                        const descriptionHeader = document.createElement('h6');
+                        descriptionHeader.textContent = 'Description:';
+                        const descriptionContent = document.createElement('p');
+                        descriptionContent.textContent = lesson.Description;
+                        descriptionDiv.appendChild(descriptionHeader);
+                        descriptionDiv.appendChild(descriptionContent);
+
+                        descriptionObjectivesContainer.appendChild(descriptionDiv);
+                    }
+
+                    // Objectives Section
+                    if (lesson.Objectives) {
+                        const objectivesDiv = document.createElement('div');
+                        objectivesDiv.className = 'lesson-objectives';
+                        const objectivesHeader = document.createElement('h6');
+                        objectivesHeader.textContent = 'Objectives:';
+
+                        const objectivesIntro = document.createElement('p');
+                        objectivesIntro.textContent = 'Students will be able to:';
+
+                        const objectivesList = document.createElement('ul'); // Create a bullet list
+                        const objectives = lesson.Objectives.split(';'); // Split into bullet points
+                        objectives.forEach(obj => {
+                            const listItem = document.createElement('li');
+                            listItem.textContent = obj.trim();
+                            objectivesList.appendChild(listItem);
+                        });
+
+                        objectivesDiv.appendChild(objectivesHeader);
+                        objectivesDiv.appendChild(objectivesIntro);
+                        objectivesDiv.appendChild(objectivesList);
+
+                        descriptionObjectivesContainer.appendChild(objectivesDiv);
+                    }
+
+                    // Append the container to lessonDetails
+                    lessonDetails.appendChild(descriptionObjectivesContainer);
+                }
+
+
+                // Question of the day Section
+                if (lesson.Question_Of_The_Day) {
+                    // Create a container for Question of the Day
+                    const QODContainer = document.createElement('div');
+                    QODContainer.className = 'QOD';
+
+                    // Create the inner content
+                    const QODHeader = document.createElement('h6');
+                    QODHeader.textContent = 'Question of the Day:';
+
+                    const QODContent = document.createElement('p');
+                    QODContent.textContent = lesson.Question_Of_The_Day;
+
+                    // Append header and content into the container
+                    QODContainer.appendChild(QODHeader);
+                    QODContainer.appendChild(QODContent);
+
+                    // Append the container to lessonDetails
+                    lessonDetails.appendChild(QODContainer);
+                }
+
                 if (lesson.Assignments) {
                     const assignmentsHeader = document.createElement('h6');
                     assignmentsHeader.textContent = 'Assignments:';
                     lessonDetails.appendChild(assignmentsHeader);
-                
-                    const assignments = lesson.Assignments.split(';'); // Ensure correct column
+
+                    const assignments = lesson.Assignments.split(';');
                     assignments.forEach((assignment, index) => {
+                        const assignmentContainer = document.createElement('div');
+                        assignmentContainer.style.display = 'flex'; // Arrange items horizontally
+                        assignmentContainer.style.alignItems = 'center';
+                        assignmentContainer.style.marginBottom = '5px';
+
+                        // Create the checkbox
+                        const checkbox = document.createElement('input');
+                        checkbox.type = 'checkbox';
+                        checkbox.id = `${lesson.Unit}-${lesson.Chapter}-Assignment-${index + 1}`;
+                        checkbox.checked = localStorage.getItem(checkbox.id) === 'true';
+                        checkbox.addEventListener('change', () => {
+                            localStorage.setItem(checkbox.id, checkbox.checked);
+                        });
+
+                        // Create the assignment link
                         const assignmentLink = document.createElement('a');
-                        assignmentLink.href = encodeURI(assignment.trim());; // Properly encode the URL
+                        assignmentLink.href = assignment.trim();
                         assignmentLink.textContent = `Download Assignment ${index + 1}`;
                         assignmentLink.target = '_blank';
-                        assignmentLink.style.display = 'block';
-                        lessonDetails.appendChild(assignmentLink);
+                        assignmentLink.style.marginLeft = '10px'; // Space between checkbox and link
+
+                        // Add checkbox and link to the container
+                        assignmentContainer.appendChild(checkbox);
+                        assignmentContainer.appendChild(assignmentLink);
+
+                        lessonDetails.appendChild(assignmentContainer);
                     });
                 }
-                
+
+
                 if (lesson.Notes) {
                     const assignmentsHeader = document.createElement('h6');
                     assignmentsHeader.textContent = 'Lesson Notes:';
                     lessonDetails.appendChild(assignmentsHeader);
-                
+
                     const assignments = lesson.Notes.split(';'); // Ensure correct column
                     assignments.forEach((assignment, index) => {
                         const assignmentLink = document.createElement('a');
@@ -172,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (lesson.Videos) {
                     const assignmentsHeader = document.createElement('h6');
                     assignmentsHeader.textContent = 'Lesson Videos:';
-                    lessonDetails.appendChild(assignmentsHeader); 
+                    lessonDetails.appendChild(assignmentsHeader);
 
                     const assignments = lesson.Videos.split(';');
                     assignments.forEach((assignment, index) => {
@@ -235,12 +318,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function parseCSV(csv) {
         const rows = csv.trim().split('\n');
         const headers = rows[0].split(',');
-    
+
         return rows.slice(1).map(row => {
             const values = [];
             let current = '';
             let inQuotes = false;
-    
+
             // Properly split fields, handling quoted commas
             for (let char of row) {
                 if (char === '"' && !inQuotes) {
@@ -255,7 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
             values.push(current.trim());
-    
+
             const lesson = {};
             headers.forEach((header, index) => {
                 lesson[header.trim()] = values[index]?.trim() || '';
@@ -265,7 +348,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     loadLessons('lessons-list-CSD', 'CSD/CSD_Lessons.csv');
 
-    
+
 });
 
 

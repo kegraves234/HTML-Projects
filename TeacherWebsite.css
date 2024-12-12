@@ -331,7 +331,7 @@ html, body {
 
 /* Default Home Class */
 .home {
-    text-align: center;
+    text-align: left;
     border: 1px solid #69f5af;
     border-radius: 12px;
     box-shadow: 0 8px 15px rgba(195, 5, 5, 0.838);
@@ -340,7 +340,9 @@ html, body {
     background: linear-gradient(to top right, rgba(104, 235, 252, 0.297), rgb(186, 244, 252)),
                 url('codeworkspacebackground.jpg') center/cover no-repeat;
 }
-
+.home h1{
+    text-align: center;
+}
 /* Dark Mode for Home Class */
 .home.dark-mode {
     border: 1px solid #828583;
@@ -417,7 +419,7 @@ main {
 .home h2 {
     font-size: 1.5rem;
     margin-bottom: 20px;
-    color: #4CAF50;
+    color: #010101;
     
 }
 
@@ -693,8 +695,59 @@ ul {
     padding-left: 40px;
     margin: 10px;
 }
+/* Container for description and objectives */
+.description-objectives-container {
+    display: flex; /* Makes content side by side */
+    justify-content: space-between; /* Adds spacing between columns */
+    gap: 20px; /* Adds space between the two sections */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
+/* Style for description section */
+.lesson-description {
+    flex: 1; /* Takes half the space */
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
 
+/* Style for objectives section */
+.lesson-objectives {
+    flex: 1; /* Takes half the space */
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Bullet list for objectives */
+.lesson-objectives ul {
+    list-style-type: disc; /* Standard bullet points */
+    margin-left: 20px; /* Indent bullets */
+    padding-left: 0;
+}
+
+.lesson-objectives li {
+    margin-bottom: 5px; /* Adds spacing between list items */
+}
+
+h6 {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.QOD h6{
+    text-align: center;
+    padding: 10px;
+}
+.QOD p{
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    font-size: large;
+    padding: 10px;
+}
 
 footer {
     background: linear-gradient(to bottom, #333, #111);
