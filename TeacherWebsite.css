@@ -34,6 +34,10 @@ body {
     color: var(--primary-text-color);
     
 }
+p{
+    font-size: large;
+    font-weight: 580;
+}
 
 header {
     background-color: var(--header-bg-color);
@@ -226,9 +230,9 @@ body.dark-mode .welcome-banner {
 }
 
 
-body.dark-mode {
+body.dark-mode{
     
-    color: #624a4a61;
+    color: #fdfafa;
 }
 
 body.dark-mode header {
@@ -239,7 +243,7 @@ body.dark-mode header {
 
 body.dark-mode .lesson {
     background-color: #33333376;
-    color: #ddd;
+    color: #060202;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
@@ -348,14 +352,18 @@ html, body {
     border: 1px solid #828583;
     border-radius: 12px;
     box-shadow: 0 8px 15px rgba(9, 9, 9, 0.838);
-    color: #060606;
+    color: #fdfbfb;
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
     background: linear-gradient(to bottom left, #33333338, #444),
                 url('codeworkspacebackground.jpg') center/cover no-repeat;
     
 }
-
-
+.home.dark-mode h2{
+    color: white;
+}
+.upcoming-events{
+    color: black;
+}
 .upcoming-events {
     background-color: #f9f9f9;
     padding: 20px;
@@ -650,9 +658,11 @@ main {
 
 
 .lesson-details input[type="checkbox"] {
-    margin-right: 10px; /* Adjust the spacing as needed */
+    margin-right: 1px; /* Adjust the spacing as needed */
 }
-
+.lessons-list{
+    color: black;
+}
 
 .chapter {
     margin-left: 5px;
@@ -668,6 +678,9 @@ ul {
 }
 .unit, .chapter, .lesson {
     margin: 5px 0;
+}
+.unit h3, .chapter h4, .lesson h5{
+    font-size: 20px;
 }
 
 .unit h3, .chapter h4, .lesson h5, .lesson-details {
@@ -685,10 +698,12 @@ ul {
 .chapter,.lesson, .lesson-details {
     display: none; /* All chapters and lesson details start collapsed */
     margin-left: 20px;
+    font-size: 20px;
 }
 
 .lesson {
     padding-left: 20px;
+    font-size: 20px;
 }
 
 .lesson-details {
@@ -700,46 +715,77 @@ ul {
     display: flex; /* Makes content side by side */
     justify-content: space-between; /* Adds spacing between columns */
     gap: 20px; /* Adds space between the two sections */
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 20px;
+    
 }
 
 /* Style for description section */
 .lesson-description {
     flex: 1; /* Takes half the space */
-    background-color: #f9f9f9;
+    
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 3px dotted #343434;
     border-radius: 5px;
+    font-size: large;
+    color: rgba(4, 3, 3, 0.764);
+    
+}
+.lesson-description h6{
+    font-size: larger;
+    font-weight: bolder;
+    color: black;
 }
 
 /* Style for objectives section */
 .lesson-objectives {
     flex: 1; /* Takes half the space */
-    background-color: #f9f9f9;
+    
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 3px dotted #343434;
     border-radius: 5px;
+}
+.lesson-objectives h6{
+    font-size: larger;
+    font-weight: bolder;
+    color: black;
+}
+.lesson-objectives p{
+    font-size: larger;
+    color: #1d1d1df6;
 }
 
 /* Bullet list for objectives */
 .lesson-objectives ul {
     list-style-type: disc; /* Standard bullet points */
-    margin-left: 20px; /* Indent bullets */
+    margin-left: 30px; /* Indent bullets */
     padding-left: 0;
+    font-size: large;
 }
 
 .lesson-objectives li {
     margin-bottom: 5px; /* Adds spacing between list items */
+    color: rgba(4, 3, 3, 0.764)
 }
 
 h6 {
     margin-bottom: 5px;
     font-weight: bold;
+    font-size: large;
+}
+.QOD{
+    margin-left: 5%;
+    padding-left: 2px;
+    margin-right: 5%;
+    padding-right: 2px;
+    border: 3px dotted #343434;
+    border-radius: 5px;
 }
 .QOD h6{
+    font-size: larger;
+    font-weight: bolder;
+    color: black;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
 }
 .QOD p{
     margin-left: 5%;
@@ -747,6 +793,7 @@ h6 {
     text-align: center;
     font-size: large;
     padding: 10px;
+    color: rgba(4, 3, 3, 0.764)
 }
 
 footer {
