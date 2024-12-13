@@ -2,7 +2,7 @@
 /* Root Variables for Light and Dark Mode */
 /* Light Mode (default) */
 :root {
-    --primary-bg-color: rgb(197, 245, 252);
+    --primary-bg-color: rgba(197, 245, 252, 0.836);
     --primary-text-color: #333;
     --header-bg-color: rgb(2, 56, 68);
     --button-bg-color: #FF9800;
@@ -76,7 +76,9 @@ header h1 {
 }
 
 .welcome-banner p{
-    color:#FF9800
+    color:#FF9800;
+    font-weight: bolder;
+    font-size: 20px;
 }
 
 
@@ -200,6 +202,7 @@ h2{
 
 .ClassLinks nav button:hover {
     background-color: #f7a52b;
+    color: rgba(104, 235, 252, 0.98);
     transform: scale(1.1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
@@ -339,9 +342,9 @@ html, body {
     border: 1px solid #69f5af;
     border-radius: 12px;
     box-shadow: 0 8px 15px rgba(195, 5, 5, 0.838);
-    background-color: rgb(197, 245, 252);
+    background-color: rgba(197, 245, 252, 0.466);
     color: #201e1e;
-    background: linear-gradient(to top right, rgba(104, 235, 252, 0.297), rgb(186, 244, 252)),
+    background: linear-gradient(to top right, rgba(104, 235, 252, 0.297), rgba(186, 244, 252, 0.775)),
                 url('codeworkspacebackground.jpg') center/cover no-repeat;
 }
 .home h1{
@@ -387,7 +390,7 @@ html, body {
 }
 .feedback-form {
     
-    background-color: #f0f0f0;
+    background-color: #f0f0f0de;
     padding: 20px;
     margin: 20px auto;
     border-radius: 8px;
@@ -405,7 +408,8 @@ html, body {
     width: 95%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffffc6;
+    background-color: #ffffffcf;
     border-radius: 5px;
 }
 .feedback-form button {
@@ -477,14 +481,18 @@ main {
 }
 
 .quick-links li a {
-    color: #1abc9c;
+    color: #0fa083;
     text-decoration: none;
     transition: color 0.3s ease;
+    font-size: 18px;
+    font-weight: 900;
 }
 
 .quick-links li a:hover {
     color: #16a085;
     text-decoration: underline;
+    font-size: 26px;
+    font-weight: 900;
 }
 .quick-links {
     margin: 20px auto;
@@ -693,7 +701,7 @@ ul {
 
 .unit h3, .chapter h4, .lesson h5, .lesson-details {
     cursor: pointer;
-    background-color: #c5f5fc;
+    background-color: #c5f5fce6;
     padding: 15px;
     margin: 10px 0;
     border-radius: 8px;
