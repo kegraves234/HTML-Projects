@@ -226,7 +226,7 @@ h2{
 
 body.dark-mode .welcome-banner {
     background: linear-gradient(to right, #33333338, #444),
-    url('./assets/unsplashcodingbackground.jpg') center/cover no-repeat;
+    url('assets/unsplashcodingbackground.jpg') center/cover no-repeat;
     
     box-shadow: 0 8px 15px rgba(9, 9, 9, 0.838);
     
