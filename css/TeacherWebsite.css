@@ -226,7 +226,7 @@ h2{
 
 body.dark-mode .welcome-banner {
     background: linear-gradient(to right, #33333338, #444),
-    url('/assets/unsplashcodingbackground.jpg') center/cover no-repeat;
+    url('./assets/unsplashcodingbackground.jpg') center/cover no-repeat;
     
     box-shadow: 0 8px 15px rgba(9, 9, 9, 0.838);
     
@@ -345,7 +345,7 @@ html, body {
     background-color: rgba(197, 245, 252, 0.466);
     color: #201e1e;
     background: linear-gradient(to top right, rgba(104, 235, 252, 0.297), rgba(186, 244, 252, 0.775)),
-                url('/assets/codeworkspacebackground.jpg') center/cover no-repeat;
+                url('./assets/codeworkspacebackground.jpg') center/cover no-repeat;
 }
 .home h1{
     text-align: center;
@@ -358,7 +358,7 @@ html, body {
     color: #fdfbfb;
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
     background: linear-gradient(to bottom left, #33333338, #444),
-                url('/assests/codeworkspacebackground.jpg') center/cover no-repeat;
+                url('./assests/codeworkspacebackground.jpg') center/cover no-repeat;
     
 }
 .home.dark-mode h2{
