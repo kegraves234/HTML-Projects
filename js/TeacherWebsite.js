@@ -352,7 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return lesson;
         });
     }
-    loadLessons('lessons-list-CSD', '/uploads/CSD/CSD_Lessons.csv');
+    loadLessons('lessons-list-CSD', 'uploads/CSD/CSD_Lessons.csv');
 
 
 
