@@ -58,7 +58,8 @@ header h1 {
     opacity: 0;
     animation: fadeInSlide 1s ease-in-out forwards;
     background: linear-gradient(to top right, rgba(111, 55, 55, 0.461), rgba(77, 142, 150, 0.459)), 
-                url('../assets/unsplashcodingbackground.jpg') center/cover no-repeat;
+            url('../assets/unsplashcodingbackground.jpg') center/cover no-repeat;
+
     color: rgba(104, 235, 252, 0.98);
     padding: 50px 20px;
     text-align: center;
