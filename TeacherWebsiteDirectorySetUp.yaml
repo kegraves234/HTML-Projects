@@ -1,0 +1,60 @@
+/Corvian
+  /TeacherWebsite
+    /CSD
+      /Unit_3_Chapter_1_Lesson_1
+        CSD Interactive Animations and Games - Lesson 01 - Programming for a Purpose.pptx
+        U3L01 - Activity Guide - Animation and Game Designs for Users.pdf
+        U3L01 - Digital Resource - Animation and Game Design Template.pdf
+        U3L01 Activity Guide - Word Search.pdf
+      /Unit_3_Chapter_1_Lesson_2
+        CSD Interactive Animations and Games - Lesson 02 - Plotting Shapes.pptx
+        U3L02 - Activity Guide - Drawing Shapes (Version A).docx
+        U3L02 - Activity Guide - Drawing Shapes (Version B).docx
+      /Unit_3_Chapter_1_Lesson_3
+        CSD Interactive Animations and Games - Lesson 03 - Drawing in Game Lab.pptx
+
+      CSD_Lesson_Plan_Schedule.csv
+      CSD_Lessons.csv
+      problemsolvingprocess-mp4.mp4
+    /HTMLandCSS
+      /.vscode 
+        settings.json 
+      /HTML-Projects 
+        PersonalPortfolio.html 
+        WeatherApp.html 
+      /task-manager task-manager/
+        /__pycache__ 
+          app.cpython-311.pyc 
+        /static 
+          style.css 
+        /templates 
+          index.html 
+        app.py 
+        DirectoryStructure 
+      aboutme.css 
+      aboutmehome.html 
+      Mr.Graves.html 
+      PersonalPortfolio.html 
+      WeatherApp.html
+    /node_modules 
+    /Python Corvian
+    /python_calander 
+    .gitattributes 
+    2024-2025 School 
+    Calendar9.pdf 
+    ap_csp.html 
+    codeworkspacebackground.jpg 
+    codingscreenbackground.png 
+    CSD_HomePage.html 
+    my_modules_with_lessons.csv 
+    package-lock.json 
+    package.json 
+    python_lessons.html 
+    pythonbackground.jpg 
+    requirements.txt 
+    TeacherWebsite.css 
+    TeacherWebsite.js 
+    TeacherWebsiteHome.html 
+    teacherwebsitetest.css 
+    teacherwebsitetest.html 
+    unsplashcodingbackground.jpg

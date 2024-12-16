@@ -1,0 +1,889 @@
+
+/* Root Variables for Light and Dark Mode */
+/* Light Mode (default) */
+:root {
+    --primary-bg-color: rgba(197, 245, 252, 0.836);
+    --primary-text-color: #333;
+    --header-bg-color: rgb(2, 56, 68);
+    --button-bg-color: #FF9800;
+    --button-hover-bg-color: #e68a00;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    --primary-bg-color: #121212;
+    --primary-text-color: #f5f5f5;
+    --header-bg-color: #1f1f1f;
+    --button-bg-color: #444;
+    --button-hover-bg-color: #555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    
+    color: var(--primary-text-color);
+    
+}
+p{
+    font-size: large;
+    font-weight: 580;
+}
+
+header {
+    background-color: var(--header-bg-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* General Styling */
+/* General Welcome Banner Styling */
+.welcome-banner {
+    opacity: 0;
+    animation: fadeInSlide 1s ease-in-out forwards;
+    background: linear-gradient(to top right, rgba(111, 55, 55, 0.461), rgba(77, 142, 150, 0.459)), 
+                url('/assets/unsplashcodingbackground.jpg') center/cover no-repeat;
+    color: rgba(104, 235, 252, 0.98);
+    padding: 50px 20px;
+    text-align: center;
+    
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 0;
+    box-shadow: 0 4px 15px rgba(195, 5, 5, 0.838)
+
+}
+/* Banner for Python Lessons */
+#welcome-banner#python-lessons {
+    background: linear-gradient(to top right, #1e1e2f, #30475e), url('python-banner.jpg') center/cover no-repeat;
+    color: #FFD700; /* Python-like theme color */
+}
+
+.welcome-banner p{
+    color:#FF9800;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+
+
+.welcome-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Black overlay with transparency */
+    z-index: 1;
+}
+
+.welcome-content {
+    position: relative;
+    z-index: 2; /* Ensures content is above the overlay */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+
+/* Specific Background for Home Page */
+
+
+
+
+.welcome-banner h1 {
+    animation: fadeIn 1s ease-in-out;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.welcome-banner h1 span {
+    color: #FF9800;
+    font-weight: bold;
+}
+
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+h2{
+    text-align: center;
+}
+.CSD_Overview{
+    text-align: center;
+    margin-Left: 25%;
+    margin-right: 25%;
+}
+
+.ClassLinks {
+    margin-top: 10px;
+}
+/* buttons*/
+/* Dark mode button */
+/* Button Styling */
+.darkbutton {
+    position: relative; /* Ensure the button is positioned properly */
+    z-index: 10; /* Bring it to the front */
+}
+
+.darkbutton button {
+    background-color: rgb(31, 32, 97); /* Button color */
+    color: #e89519; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer; /* Ensures pointer shows on hover */
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(104, 235, 252, 0.98);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.darkbutton button:hover {
+    background-color: rgb(17, 18, 63); /* Hover color */
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Hover effect */
+}
+
+
+/* Styling for Buttons Inside the Banner */
+.ClassLinks nav button {
+    background-color: #e89519;
+    color: rgb(31, 32, 97);
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(104, 235, 252, 0.98);
+    transform: scale(1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ClassLinks nav button:hover {
+    background-color: #f7a52b;
+    color: rgba(104, 235, 252, 0.98);
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-icon {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.chapter h4:hover .toggle-icon,
+.lesson h5:hover .toggle-icon {
+    transform: scale(1.2);
+}
+
+.chapter.open h4 .toggle-icon,
+.lesson.open h5 .toggle-icon {
+    transform: rotate(180deg); /* Rotate when expanded */
+}
+
+
+
+body.dark-mode .welcome-banner {
+    background: linear-gradient(to right, #33333338, #444),
+    url('/assets/unsplashcodingbackground.jpg') center/cover no-repeat;
+    
+    box-shadow: 0 8px 15px rgba(9, 9, 9, 0.838);
+    
+}
+
+
+body.dark-mode{
+    
+    color: #fdfafa;
+}
+
+body.dark-mode header {
+    background: linear-gradient(to right, #33333338, #444);
+
+    
+}
+
+body.dark-mode .lesson {
+    background-color: #33333376;
+    color: #060202;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode footer {
+    background: #111;
+    color: #ccc;
+}
+
+/* Adjust any other styles as needed */
+
+
+
+header {
+    background: linear-gradient(to top right, #0f12537b, rgba(104, 235, 252, 0.308));
+    color: rgba(11, 10, 10, 0.805);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+
+.welcome-banner {
+    margin: 0;
+    padding: 20px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures consistent box model */
+}
+
+
+
+.search-bar {
+    
+    
+    box-shadow: 0 8px 15px rgba(84, 10, 10, 0.838);
+    text-align: center;
+    margin-bottom: 0px;
+    padding: 20px;
+    
+    background: linear-gradient(to top right, #8591d57d, #94b2bc8d);
+    
+    
+}
+.search-bar input {
+    padding: 10px;
+    width: 70%;
+    max-width: 400px;
+    border: 0.1px solid #020202;
+    box-shadow: 0 2px 2px #070707;
+    border-radius: 5px;
+}
+.search-bar button {
+    padding: 10px;
+    background-color: #ff9800;
+    color: rgb(15, 12, 85);
+    border: 0.1px solid #000000;
+    box-shadow: 0 2px 2px #080808;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.search-bar button:hover {
+    background-color: #e68a00;
+}
+.suggestions-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background-color: white;
+    
+    width: 70%;
+    max-width: 400px;
+    z-index: 10;
+}
+
+.suggestions-list li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions-list li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Default Home Class */
+.home {
+    text-align: left;
+    border: 1px solid #69f5af;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(195, 5, 5, 0.838);
+    background-color: rgba(197, 245, 252, 0.466);
+    color: #201e1e;
+    background: linear-gradient(to top right, rgba(104, 235, 252, 0.297), rgba(186, 244, 252, 0.775)),
+                url('/assets/codeworkspacebackground.jpg') center/cover no-repeat;
+}
+.home h1{
+    text-align: center;
+}
+/* Dark Mode for Home Class */
+.home.dark-mode {
+    border: 1px solid #828583;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(9, 9, 9, 0.838);
+    color: #fdfbfb;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    background: linear-gradient(to bottom left, #33333338, #444),
+                url('/assests/codeworkspacebackground.jpg') center/cover no-repeat;
+    
+}
+.home.dark-mode h2{
+    color: white;
+}
+.upcoming-events{
+    color: black;
+}
+.upcoming-events {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 80%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.upcoming-events ul {
+    list-style: none;
+    padding: 0;
+}
+.upcoming-events li {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+.home.dark-mode .upcoming-events{
+    color: ghostwhite;
+    background-color: #00000000;
+}
+/* General container styling */
+/* General container styling */
+.feedback-form {
+    background-color: #f0f0f0de;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 80%;
+}
+
+/* Flex layout for alignment */
+.feedback-form form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Textarea (Feedback box) styling */
+.feedback-form textarea {
+    flex: 3;
+    height: 50px;
+    padding: 10px; /* Consistent padding to align text */
+    
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: ghostwhite; /* Ensure solid white background */
+    color: #333;
+    font-size: 1rem;
+    box-sizing: border-box;
+    line-height: 1.4; /* Reset line spacing for text alignment */
+    text-align: left; /* Ensure text starts on the left */
+}
+
+
+/* Input (Name box) styling */
+.feedback-form input {
+    flex: 1;
+    height: 50px; /* Match height to textarea */
+    padding: 10px; /* Consistent padding */
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: ghostwhite; /* Solid white background */
+    color: #333;
+    font-size: 1rem;
+    box-sizing: border-box;
+    text-align: left; /* Ensure text starts from the left */
+}
+
+
+/* Force placeholder visibility */
+.feedback-form textarea::placeholder,
+.feedback-form input::placeholder {
+    color: #3f3f3fd7 !important; /* Placeholder color */
+    opacity: 1 !important; /* Force visibility */
+    text-align: left; /* Align placeholder text to the left */
+}
+
+
+/* Submit button styling */
+.feedback-form button {
+    height: 50px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.feedback-form button:hover {
+    background-color: #45a049;
+}
+
+
+
+
+
+/* Main Content */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+.home h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #010101;
+    
+}
+
+
+.btn-explore {
+    background-color: #FF9800;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-explore:hover {
+    background-color: #e68a00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .welcome-banner h1 {
+        font-size: 2rem;
+    }
+
+    .welcome-banner p {
+        font-size: 1rem;
+    }
+
+    .btn-explore {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+.quick-links ul {
+    padding: 10px;
+    background-color: #34495e;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.quick-links li a {
+    color: #0fa083;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.quick-links li a:hover {
+    color: #16a085;
+    text-decoration: underline;
+    font-size: 26px;
+    font-weight: 900;
+}
+.quick-links {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.quick-links li {
+    margin: 10px 0;
+}
+
+
+
+
+
+
+.calendar {
+    border: 1px solid #69f5af;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(195, 5, 5, 0.838);
+    overflow: hidden;
+    margin: 20px auto;
+    width: 90%;
+    
+    max-width: 800px;
+    height: 600px;
+}
+.home.dark-mode .calendar{
+    border: 1px solid #192720;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(48, 11, 11, 0.838);
+    overflow: hidden;
+    margin: 20px auto;
+    width: 90%;
+    
+    max-width: 800px;
+    height: 600px;
+   
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .ClassLinks button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+    .darkbutton button{
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+    .calendar {
+        width: 100%;
+        height: 500px;
+    }
+}
+#lesson-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically adjust columns */
+    gap: 20px; /* Add spacing between grid items */
+    margin: 20px auto;  /*Center the container horizontally */
+    padding: 20px;
+    max-width: 1200px; /* Limit the overall width */
+    
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lesson-tracker {
+    background-color: #2c3e50;
+    border: 2px solid #1abc9c;
+    border-radius: 10px;
+    padding: 15px;
+    color: #ecf0f1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lesson-tracker:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.lesson-tracker h3 {
+    font-size: 1.5rem;
+    color: #1abc9c;
+    margin-bottom: 10px;
+}
+
+.lesson-tracker ul {
+    padding: 0;
+    list-style: none;
+}
+
+.lesson-tracker li {
+    margin: 5px 0;
+}
+
+.lesson-tracker input[type="checkbox"] {
+    border: none;
+    box-shadow: none;
+    appearance: none; /* Removes default styling for checkboxes */
+    width: 20px;
+    height: 20px;
+    
+    cursor: pointer;
+    background: #ffffff;
+    border-radius: 5px; /* Optional for rounded checkboxes */
+}
+
+.tracker-reset {
+    margin: 20px auto;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tracker-reset:hover {
+    background-color: #c0392b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.lesson-tracker label {
+    cursor: pointer;
+    font-size: 1rem;
+    color: rgba(104, 235, 252, 0.98);
+    transition: color 0.3s;
+}
+
+.lesson-tracker input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: #15336a;
+}
+
+#resetProgress {
+    background-color: #d38003;
+    color: #556c8d;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#resetProgress:hover {
+    background-color: #e68a00;
+    color:#6481a9;
+}
+
+/* Lesson Container for Grid Layout */
+
+
+
+
+
+.lesson-details h6 {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+}
+.lesson-details a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #007bff;
+}
+.lesson-details a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+
+.lesson-details input[type="checkbox"] {
+    margin-right: 1px; /* Adjust the spacing as needed */
+}
+.lessons-list{
+    color: black;
+}
+
+.chapter {
+    margin-left: 5px;
+}
+
+.chapter h4 {
+    color: #fd721b; /* Customize to your preferred color */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+.unit, .chapter, .lesson {
+    margin: 5px 0;
+}
+.unit h3, .chapter h4, .lesson h5{
+    font-size: 20px;
+}
+
+.unit h3, .chapter h4, .lesson h5, .lesson-details {
+    cursor: pointer;
+    background-color: #c5f5fce6;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.chapter,.lesson, .lesson-details {
+    display: none; /* All chapters and lesson details start collapsed */
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.lesson {
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.lesson-details {
+    padding-left: 40px;
+    margin: 10px;
+}
+/* Container for description and objectives */
+.description-objectives-container {
+    display: flex; /* Makes content side by side */
+    justify-content: space-between; /* Adds spacing between columns */
+    gap: 20px; /* Adds space between the two sections */
+    margin: 20px;
+    
+}
+
+/* Style for description section */
+.lesson-description {
+    flex: 1; /* Takes half the space */
+    
+    padding: 10px;
+    border: 3px dotted #343434;
+    border-radius: 5px;
+    font-size: large;
+    color: rgba(4, 3, 3, 0.764);
+    
+}
+.lesson-description h6{
+    font-size: larger;
+    font-weight: bolder;
+    color: black;
+}
+
+/* Style for objectives section */
+.lesson-objectives {
+    flex: 1; /* Takes half the space */
+    
+    padding: 10px;
+    border: 3px dotted #343434;
+    border-radius: 5px;
+}
+.lesson-objectives h6{
+    font-size: larger;
+    font-weight: bolder;
+    color: black;
+}
+.lesson-objectives p{
+    font-size: larger;
+    color: #1d1d1df6;
+}
+
+/* Bullet list for objectives */
+.lesson-objectives ul {
+    list-style-type: disc; /* Standard bullet points */
+    margin-left: 30px; /* Indent bullets */
+    padding-left: 0;
+    font-size: large;
+}
+
+.lesson-objectives li {
+    margin-bottom: 5px; /* Adds spacing between list items */
+    color: rgba(4, 3, 3, 0.764)
+}
+
+h6 {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: large;
+}
+.QOD{
+    margin-left: 5%;
+    padding-left: 2px;
+    margin-right: 5%;
+    padding-right: 2px;
+    border: 3px dotted #343434;
+    border-radius: 5px;
+}
+.QOD h6{
+    font-size: larger;
+    font-weight: bolder;
+    color: black;
+    text-align: center;
+    padding: 5px;
+}
+.QOD p{
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    font-size: large;
+    padding: 10px;
+    color: rgba(4, 3, 3, 0.764)
+}
+
+footer {
+    background: linear-gradient(to bottom, #333, #111);
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #FF9800;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #e68a00;
+}
+ /* Ensuring all original code is included */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .welcome-banner h1 {
+        font-size: 2rem;
+    }
+
+    nav button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}
