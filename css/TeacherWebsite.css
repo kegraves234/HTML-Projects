@@ -71,7 +71,7 @@ header h1 {
 }
 /* Banner for Python Lessons */
 #welcome-banner#python-lessons {
-    background: linear-gradient(to top right, #1e1e2f, #30475e), url('./python-banner.jpg') center/cover no-repeat;
+    background: linear-gradient(to top right, #1e1e2f, #30475e), url('python-banner.jpg') center/cover no-repeat;
     color: #FFD700; /* Python-like theme color */
 }
 
@@ -345,7 +345,7 @@ html, body {
     background-color: rgba(197, 245, 252, 0.466);
     color: #201e1e;
     background: linear-gradient(to top right, rgba(104, 235, 252, 0.297), rgba(186, 244, 252, 0.775)),
-                url('./assets/codeworkspacebackground.jpg') center/cover no-repeat;
+                url('assets/codeworkspacebackground.jpg') center/cover no-repeat;
 }
 .home h1{
     text-align: center;
@@ -358,7 +358,7 @@ html, body {
     color: #fdfbfb;
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
     background: linear-gradient(to bottom left, #33333338, #444),
-                url('./assests/codeworkspacebackground.jpg') center/cover no-repeat;
+                url('/assests/codeworkspacebackground.jpg') center/cover no-repeat;
     
 }
 .home.dark-mode h2{
