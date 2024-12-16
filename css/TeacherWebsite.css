@@ -346,7 +346,7 @@ html, body {
     background-color: rgba(197, 245, 252, 0.466);
     color: #201e1e;
     background: linear-gradient(to top right, rgba(104, 235, 252, 0.297), rgba(186, 244, 252, 0.775)),
-                url('assets/codeworkspacebackground.jpg') center/cover no-repeat;
+                url('../assets/codeworkspacebackground.jpg') center/cover no-repeat;
 }
 .home h1{
     text-align: center;
