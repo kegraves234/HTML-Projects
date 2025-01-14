@@ -1,0 +1,78 @@
+Unit,Chapter,Section,Filename
+Unit 1: Basics of Python,Chapter 1: An Introduction to Python,Labs,Unit1StringPractice.ipynb
+Unit 1: Basics of Python,Chapter 1: An Introduction to Python,Labs,Unit1StringPracticecopy.ipynb
+Unit 1: Basics of Python,Chapter 1: An Introduction to Python,Lessons,Unit1_GettingStartedwithPython.ipynb
+Unit 1: Basics of Python,Chapter 1: An Introduction to Python,Lessons,Unit1_PracticeNotebooksCommentsprinttype.ipynb
+Unit 1: Basics of Python,Chapter 1: An Introduction to Python,Lessons,Unit1_Section2TypesandVariables.ipynb
+Unit 1: Basics of Python,Chapter 1: An Introduction to Python,Lessons,Unit1_Section3_Type()Function.ipynb
+Unit 1: Basics of Python,Chapter 2 Strings Input,Labs,Usingtheinkeyword.ipynb
+Unit 1: Basics of Python,Chapter 2 Strings Input,Lessons,ASCIIArt.ipynb
+Unit 1: Basics of Python,Chapter 2 Strings Input,Lessons,EscapeSequences.ipynb
+Unit 1: Basics of Python,Chapter 2 Strings Input,Lessons,Unit1_Section6_Input.ipynb
+Unit 1: Basics of Python,Chapter 2 Strings Input,Lessons,Unit1_Section7_PrintFormatting.ipynb
+Unit 1: Basics of Python,Unit 1 Projects,,
+Unit2_Functions,Chapter 1 Simple Functions,Lessons,Unit2Section1SimpleFunctions.ipynb
+Unit2_Functions,Chapter 1 Simple Functions,Lessons,Unit2Section2FunctionReturnandMultiParameters.ipynb
+Unit2_Functions,Chapter 1 Simple Functions,Lessons,Unit2_Labs_FunctionsArgumentsParameters.ipynb
+Unit2_Functions,Chapter 1 Simple Functions,Lessons,Unit2_Section3_FunctionsArgumentsandParameters.ipynb
+Unit2_Functions,Unit 2 Projects,,Unit2_Projects.ipynb
+Unit3_Conditionals,Chapter1 Comparison Operators,Lessons,Unit3_Section1_ConditionalsBooleanStrings.ipynb
+Unit3_Conditionals,Chapter1 Comparison Operators,Lessons,Unit3_Section2_Conditionals_ComparisonOperators.ipynb
+Unit3_Conditionals,Chapter1 Comparison Operators,Lessons,Unit3_Section3_Conditionals_StringComparision.ipynb
+Unit3_Conditionals,Chapter2 Conditionals,Labs,Unit3_Lab1.ipynb
+Unit3_Conditionals,Chapter2 Conditionals,Labs,Unit3_Lab2_Conditionals_TypeandMathematics.ipynb
+Unit3_Conditionals,Chapter2 Conditionals,Lessons,NestedConditionals.ipynb
+Unit3_Conditionals,Chapter2 Conditionals,Lessons,NestedConditionalsLab.ipynb
+Unit3_Conditionals,Projects,,Unit3_Chapter2_Project_CheeseOrder.ipynb
+Unit3_Conditionals,Projects,,Unit3_Chapter2_Project_ConditionalsWithCasting.ipynb
+Unit3_Conditionals,Projects,,Unit3_Section4_Conditionals_elif_Casting.ipynb
+Unit3_Conditionals,Projects,,Unit3_Section5_Conditionals_TypeandMathematicsExtended.ipynb
+Unit4_Loops,Chapter1_While_Loops,Labs,WhileLoopsLab.ipynb
+Unit4_Loops,Chapter1_While_Loops,Lessons,WhileBooleanLoops.ipynb
+Unit4_Loops,Chapter1_While_Loops,Lessons,WhileLoopsandIncrementing.ipynb
+Unit4_Loops,Chapter2_List_Iteration,Labs,IterationOfSequencesLab.ipynb
+Unit4_Loops,Chapter2_List_Iteration,Lessons,ListIteration.ipynb
+Unit4_Loops,Chapter2_List_Iteration,Lessons,RangeIteration.ipynb
+Unit4_Loops,Projects,,Unit4_Chapter1_Project_WhileNestedIfElse.ipynb
+Unit4_Loops,Projects,,Unit4_Chapter2_Project_ForAndIn.ipynb
+Unit5_Strings_Lists,Chapter1 Comparison Operators,Lessons,BooleansInKeyWords.ipynb 
+Unit5_Strings_Lists,Chapter1 Comparison Operators,Lessons,StringFormattingUsingTheInKeyWord.ipynb
+Unit5_Strings_Lists,Chapter1_Strings,Labs,SequenceIndexLab.ipynb
+Unit5_Strings_Lists,Chapter1_Strings,Labs,SequenceManipulationLab.ipynb
+Unit5_Strings_Lists,Chapter1_Strings,Lessons,ConvertingBetweenListsandStrings.ipynb
+Unit5_Strings_Lists,Chapter1_Strings,Lessons,IndexSlicing.ipynb
+Unit5_Strings_Lists,Chapter1_Strings,Lessons,IteratingString.ipynb
+Unit5_Strings_Lists,Chapter1_Strings,Lessons,StringMethonds.ipynb
+Unit5_Strings_Lists,Chapter1_Strings,Lessons,StringSequences.ipynb
+Unit5_Strings_Lists,Chapter2 Conditionals,Labs,CompoundConitionalsAdvancedLoopsOperatorPrecedenceLabLab.ipynb 
+Unit5_Strings_Lists,Chapter2_List_Methods,Lessons,ListAppend.ipynb
+Unit5_Strings_Lists,Chapter2_List_Methods,Lessons,ListDelete.ipynb
+Unit5_Strings_Lists,Chapter2_List_Methods,Lessons,ListInsert.ipynb
+Unit5_Strings_Lists,Chapter2_List_Methods,Lessons,ListMethods.ipynb
+Unit5_Strings_Lists,Chapter2_List_Methods,Lessons,ListSequences.ipynb
+Unit5_Strings_Lists,Projects,,Unit3_Chapter2_Project_InKeywordBooleans.ipynb
+Unit5_Strings_Lists,Projects,,Unit5_Chapter2_Project_ListsAndStrings.ipynb
+Unit5_Strings_Lists,Projects,,Unit5_Chapter2_Project_StringAndListMethods.ipynb
+Unit 6 Files and Command Line,Chapter1_File_Handling,Labs,Unit6_Chapter1_Lab_WorkingWithFiles.ipynb
+Unit 6 Files and Command Line,Chapter1_File_Handling,Lessons,CheckDeleteCheckpathFileexceptions.ipynb
+Unit 6 Files and Command Line,Chapter1_File_Handling,Lessons,FileReadlineStripMethods.ipynb
+Unit 6 Files and Command Line,Chapter1_File_Handling,Lessons,FileSystems.ipynb
+Unit 6 Files and Command Line,Chapter1_File_Handling,Lessons,FileWriteandSeekMethods.ipynb
+Unit 6 Files and Command Line,Chapter1_File_Handling,Lessons,Filereadlines&closeMethods.ipynb
+Unit 6 Files and Command Line,Chapter1_File_Handling,Lessons,FilesImportOpenRead.ipynb
+Unit 6 Files and Command Line,Chapter 2 Command line,Lessons,ScriptEnvCommandLineArgsVariableScopeDocstringPydocLab.ipynb 
+Unit 6 Files and Command Line,Chapter 2 Command line, Lessons, ScriptEnvironment&commandLineArguments.ipynb 
+Unit 6 Files and Command Line,Projects,,Unit6_Chapter1_Project_FileMethods.ipynb
+Unit7_Modules,Chapter1_BuiltIn_Modules,Lessons,PythonModulesDateandTimeLab.ipynb
+Unit7_Modules,Chapter1_BuiltIn_Modules,Lessons,UsingPythonModules.ipynb
+Unit7_Modules,Chapter1_BuiltIn_Modules,Lessons,dateandtimemodules.ipynb
+Unit7_Modules,Chapter2_Date_Time_Pydoc,Lessons,DateandTimeArithmetic.ipynb
+Unit7_Modules,Chapter2_Date_Time_Pydoc,Lessons,Docstring.ipynb
+Unit7_Modules,Chapter2_Date_Time_Pydoc,Lessons,pydoc.ipynb
+Unit8_Advanced_Topics,Chapter1_Dictionaries_Tuples,Lessons,Dictionaries.ipynb
+Unit8_Advanced_Topics,Chapter1_Dictionaries_Tuples,Lessons,Tuples.ipynb
+Unit8_Advanced_Topics,Chapter2_Advanced_Loops,Lessons,AdvancedLoopStructures.ipynb
+Unit8_Advanced_Topics,Chapter2_Advanced_Loops,Lessons,BooleanExpressionsCompoundConditionals.ipynb
+Unit8_Advanced_Topics,Chapter2_Advanced_Loops,Lessons,ContainmentIdentityOperatorPrecedence.ipynb
+Unit8_Advanced_Topics,Projects,,Unit8_Projects_FinalProject_AdvancedTopics.ipynb
+Unit8_Advanced_Topics,Projects,,Unit8_Projects_FinalProject_PythonModules.ipynb

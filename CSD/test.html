@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<body>
+    <script>
+        // Your entire JavaScript code goes here!
+        // Canvas setup
+        const canvas = document.createElement("canvas");
+        canvas.width = 400;
+        canvas.height = 400;
+        canvas.style.border = "1px solid black";
+        document.body.appendChild(canvas);
+        const ctx = canvas.getContext("2d");
+
+        // start drawing
+    </script>
+        ctx.fillStyle = "lightblue";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = "red";
+        ctx.fillRect(50, 50, 300, 300);
+    </script>
+</body>
+</html>

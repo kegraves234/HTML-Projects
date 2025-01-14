@@ -354,7 +354,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     loadLessons('lessons-list-CSD', './uploads/CSD/CSD_Lessons.csv');
 
-
+    loadLessons('lessons-list-python', './uploads/Python/pythoncsv/Python_Lessons.csv')
 
 });
 
