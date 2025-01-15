@@ -3,15 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleButton = document.getElementById('dark-mode-toggle');
     const homeElement = document.querySelector('.home');
     const calendarElement = document.querySelector('.calendar');
-    const headers = document.querySelectorAll('.unit h3, .chapter h4, .lesson h5');
 
+    // Reset Progress
     if (resetButton) {
         resetButton.addEventListener('click', resetProgress);
     }
-    headers.forEach(header => {
-        header.addEventListener('click', () => toggleSection(header));
-    });
 
+    // Dark Mode Toggle
     if (toggleButton) {
         if (localStorage.getItem('dark-mode') === 'enabled') {
             document.body.classList.add('dark-mode');
@@ -35,9 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
-
-    async function loadPythonLessons(containerId, csvFile) {
+    // Function to load lessons dynamically
+    async function loadLessons(containerId, csvFile) {
         const lessonContainer = document.getElementById(containerId);
         if (!lessonContainer) {
             console.error(`Lesson container (${containerId}) not found!`);
@@ -47,114 +44,100 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const response = await fetch(csvFile);
             const csvData = await response.text();
-            const lessons = parseCSV(csvData);
+            const lessons = parseCSV(csvData); // Function to parse CSV
 
-            const unitMap = {}; // Map to store units, chapters, and sections
+            const unitMap = {}; // Map to track Units and Chapters
 
-            lessons.forEach(lesson => {
-                // Create or find the unit
-                if (!unitMap[lesson.Unit]) {
+            lessons.forEach(({ Unit, Chapter, Section, Filename }) => {
+                // Ensure Unit
+                if (!unitMap[Unit]) {
                     const unitDiv = document.createElement('div');
                     unitDiv.className = 'unit';
 
                     const unitHeader = document.createElement('h3');
-                    unitHeader.textContent = lesson.Unit;
+                    unitHeader.textContent = Unit;
                     unitHeader.innerHTML += `<span class="toggle-icon">▼</span>`;
-                    unitHeader.onclick = () => toggleSection(unitHeader);
+                    unitHeader.addEventListener('click', () => toggleSection(unitHeader));
                     unitDiv.appendChild(unitHeader);
 
                     const chapterContainer = document.createElement('div');
                     chapterContainer.className = 'chapters-container';
-                    chapterContainer.style.display = 'none'; // Initially collapsed
+                    chapterContainer.style.display = 'none';
                     unitDiv.appendChild(chapterContainer);
 
-                    unitMap[lesson.Unit] = { unitDiv, chapters: {}, chapterContainer };
+                    unitMap[Unit] = { unitDiv, chapters: {}, chapterContainer };
                     lessonContainer.appendChild(unitDiv);
                 }
 
-                const { chapterContainer, chapters } = unitMap[lesson.Unit];
+                const { chapters, chapterContainer } = unitMap[Unit];
 
-                // Create or find the chapter
-                if (!chapters[lesson.Chapter]) {
+                // Ensure Chapter
+                if (!chapters[Chapter]) {
                     const chapterDiv = document.createElement('div');
                     chapterDiv.className = 'chapter';
 
                     const chapterHeader = document.createElement('h4');
-                    chapterHeader.textContent = lesson.Chapter;
+                    chapterHeader.textContent = Chapter;
                     chapterHeader.innerHTML += `<span class="toggle-icon">▼</span>`;
-                    chapterHeader.onclick = () => toggleSection(chapterHeader);
+                    chapterHeader.addEventListener('click', () => toggleSection(chapterHeader));
                     chapterDiv.appendChild(chapterHeader);
 
-                    const sectionContainer = document.createElement('div');
-                    sectionContainer.className = 'sections-container';
-                    sectionContainer.style.display = 'none'; // Initially collapsed
-                    chapterDiv.appendChild(sectionContainer);
+                    const sectionsContainer = document.createElement('div');
+                    sectionsContainer.className = 'sections-container';
+                    sectionsContainer.style.display = 'none';
+                    chapterDiv.appendChild(sectionsContainer);
 
-                    chapters[lesson.Chapter] = { chapterDiv, sections: {}, sectionContainer };
+                    chapters[Chapter] = { chapterDiv, sectionsContainer };
                     chapterContainer.appendChild(chapterDiv);
                 }
 
-                const { sectionContainer, sections } = chapters[lesson.Chapter];
+                const { sectionsContainer } = chapters[Chapter];
 
-                // Create or find the section
-                if (!sections[lesson.Section]) {
-                    const sectionDiv = document.createElement('div');
+                // Ensure Section
+                let sectionDiv = sectionsContainer.querySelector(`.section[data-section="${Section}"]`);
+                if (!sectionDiv) {
+                    sectionDiv = document.createElement('div');
                     sectionDiv.className = 'section';
+                    sectionDiv.setAttribute('data-section', Section);
 
                     const sectionHeader = document.createElement('h5');
-                    sectionHeader.textContent = lesson.Section;
+                    sectionHeader.textContent = Section;
                     sectionHeader.innerHTML += `<span class="toggle-icon">▼</span>`;
-                    sectionHeader.onclick = () => toggleSection(sectionHeader);
+                    sectionHeader.addEventListener('click', () => toggleSection(sectionHeader));
                     sectionDiv.appendChild(sectionHeader);
 
-                    const fileContainer = document.createElement('div');
-                    fileContainer.className = 'files-container';
-                    fileContainer.style.display = 'none'; // Initially collapsed
-                    sectionDiv.appendChild(fileContainer);
+                    const filesContainer = document.createElement('div');
+                    filesContainer.className = 'files-container';
+                    filesContainer.style.display = 'none';
+                    sectionDiv.appendChild(filesContainer);
 
-                    sections[lesson.Section] = { sectionDiv, fileContainer };
-                    sectionContainer.appendChild(sectionDiv);
+                    sectionsContainer.appendChild(sectionDiv);
                 }
 
-                const { fileContainer } = sections[lesson.Section];
+                const filesContainer = sectionDiv.querySelector('.files-container');
 
-                // Add the file to the section
+                // Add File
                 const fileLink = document.createElement('a');
-                fileLink.href = `./uploads/Python/${lesson.Unit}/${lesson.Chapter}/${lesson.Section}/${lesson.Filename}`;
-                fileLink.textContent = lesson.Filename;
+                fileLink.href = encodeURI(Filename.trim());
+                fileLink.textContent = Filename.split('/').pop(); // Display the file name
                 fileLink.target = '_blank';
-                fileLink.style.display = 'block'; // Each file link on a new line
-                fileContainer.appendChild(fileLink);
+                filesContainer.appendChild(fileLink);
             });
         } catch (error) {
             console.error(`Error loading lessons from ${csvFile}:`, error);
         }
     }
 
+    // Utility to toggle sections
     function toggleSection(header) {
-        const section = header.nextElementSibling; // The container to show/hide
-        const icon = header.querySelector('.toggle-icon'); // The toggle icon (▼/▲)
-    
-        if (!section) return; // Exit if no section is found
-    
-        const isCollapsed = section.style.display === 'none' || section.style.display === ''; // Check current state
-        section.style.display = isCollapsed ? 'block' : 'none'; // Toggle display
-    
-        if (icon) {
-            icon.textContent = isCollapsed ? '▲' : '▼'; // Update the icon
-        }
-    }
-    
-
-    function resetProgress() {
-        if (confirm("Are you sure you want to reset all progress? This cannot be undone.")) {
-            localStorage.clear();
-            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-            checkboxes.forEach(checkbox => checkbox.checked = false);
-            alert("Progress has been reset.");
+        const section = header.nextElementSibling;
+        if (section) {
+            const isCollapsed = section.style.display === 'none' || section.style.display === '';
+            section.style.display = isCollapsed ? 'block' : 'none';
         }
     }
 
+    // Utility to parse CSV
     function parseCSV(csv) {
         const rows = csv.trim().split('\n');
         const headers = rows[0].split(',');
@@ -169,6 +152,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    loadPythonLessons('lessons-list-python', './uploads/Python/pythoncsv/Python_Lessons.csv');
+    // Load Python lessons dynamically
+    loadLessons('lessons-list-python', './pythoncsv/Python_Lessons.csv');
 });
-

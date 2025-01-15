@@ -1,16 +1,16 @@
 Unit,Chapter,Section,Filename
-Unit 1: Basics of Python,Chapter 1: An Introduction to Python,Labs,Unit1StringPractice.ipynb
-Unit 1: Basics of Python,Chapter 1: An Introduction to Python,Labs,Unit1StringPracticecopy.ipynb
-Unit 1: Basics of Python,Chapter 1: An Introduction to Python,Lessons,Unit1_GettingStartedwithPython.ipynb
-Unit 1: Basics of Python,Chapter 1: An Introduction to Python,Lessons,Unit1_PracticeNotebooksCommentsprinttype.ipynb
-Unit 1: Basics of Python,Chapter 1: An Introduction to Python,Lessons,Unit1_Section2TypesandVariables.ipynb
-Unit 1: Basics of Python,Chapter 1: An Introduction to Python,Lessons,Unit1_Section3_Type()Function.ipynb
-Unit 1: Basics of Python,Chapter 2 Strings Input,Labs,Usingtheinkeyword.ipynb
-Unit 1: Basics of Python,Chapter 2 Strings Input,Lessons,ASCIIArt.ipynb
-Unit 1: Basics of Python,Chapter 2 Strings Input,Lessons,EscapeSequences.ipynb
-Unit 1: Basics of Python,Chapter 2 Strings Input,Lessons,Unit1_Section6_Input.ipynb
-Unit 1: Basics of Python,Chapter 2 Strings Input,Lessons,Unit1_Section7_PrintFormatting.ipynb
-Unit 1: Basics of Python,Unit 1 Projects,,
+Unit1_Basics,Chapter 1: An Introduction to Python,Labs,Unit1StringPractice.ipynb
+Unit1_Basics,Chapter 1: An Introduction to Python,Labs,Unit1StringPracticecopy.ipynb
+Unit1_Basics,Chapter 1: An Introduction to Python,Lessons,Unit1_GettingStartedwithPython.ipynb
+Unit1_Basics,Chapter 1: An Introduction to Python,Lessons,Unit1_PracticeNotebooksCommentsprinttype.ipynb
+Unit1_Basics,Chapter 1: An Introduction to Python,Lessons,Unit1_Section2TypesandVariables.ipynb
+Unit1_Basics,Chapter 1: An Introduction to Python,Lessons,Unit1_Section3_Type()Function.ipynb
+Unit1_Basics,Chapter 2 Strings Input,Labs,Usingtheinkeyword.ipynb
+Unit1_Basics,Chapter 2 Strings Input,Lessons,ASCIIArt.ipynb
+Unit1_Basics,Chapter 2 Strings Input,Lessons,EscapeSequences.ipynb
+Unit1_Basics,Chapter 2 Strings Input,Lessons,Unit1_Section6_Input.ipynb
+Unit1_Basics,Chapter 2 Strings Input,Lessons,Unit1_Section7_PrintFormatting.ipynb
+Unit1_Basics,Unit 1 Projects,,
 Unit2_Functions,Chapter 1 Simple Functions,Lessons,Unit2Section1SimpleFunctions.ipynb
 Unit2_Functions,Chapter 1 Simple Functions,Lessons,Unit2Section2FunctionReturnandMultiParameters.ipynb
 Unit2_Functions,Chapter 1 Simple Functions,Lessons,Unit2_Labs_FunctionsArgumentsParameters.ipynb
@@ -35,6 +35,8 @@ Unit4_Loops,Chapter2_List_Iteration,Lessons,ListIteration.ipynb
 Unit4_Loops,Chapter2_List_Iteration,Lessons,RangeIteration.ipynb
 Unit4_Loops,Projects,,Unit4_Chapter1_Project_WhileNestedIfElse.ipynb
 Unit4_Loops,Projects,,Unit4_Chapter2_Project_ForAndIn.ipynb
+Unit5_Strings_Lists,Chapter 2 Function Parameters and Arguments,Lessons,ScriptEnvCommandLineArgsVariableScopeDocstringPydocLab.ipynb 
+Unit5_Strings_Lists,Chapter 2 Function Parameters and Arguments,Lessons,ScriptEnvironment&commandLineArguments.ipynb 
 Unit5_Strings_Lists,Chapter1 Comparison Operators,Lessons,BooleansInKeyWords.ipynb 
 Unit5_Strings_Lists,Chapter1 Comparison Operators,Lessons,StringFormattingUsingTheInKeyWord.ipynb
 Unit5_Strings_Lists,Chapter1_Strings,Labs,SequenceIndexLab.ipynb
@@ -44,7 +46,7 @@ Unit5_Strings_Lists,Chapter1_Strings,Lessons,IndexSlicing.ipynb
 Unit5_Strings_Lists,Chapter1_Strings,Lessons,IteratingString.ipynb
 Unit5_Strings_Lists,Chapter1_Strings,Lessons,StringMethonds.ipynb
 Unit5_Strings_Lists,Chapter1_Strings,Lessons,StringSequences.ipynb
-Unit5_Strings_Lists,Chapter2 Conditionals,Labs,CompoundConitionalsAdvancedLoopsOperatorPrecedenceLabLab.ipynb 
+Unit5_Strings_Lists,Chapter2 Conditionals,Labs,CompoundConitionalsAdvancedLoopsOperatorPrecedenceLabLab.ipynb
 Unit5_Strings_Lists,Chapter2_List_Methods,Lessons,ListAppend.ipynb
 Unit5_Strings_Lists,Chapter2_List_Methods,Lessons,ListDelete.ipynb
 Unit5_Strings_Lists,Chapter2_List_Methods,Lessons,ListInsert.ipynb
@@ -53,17 +55,15 @@ Unit5_Strings_Lists,Chapter2_List_Methods,Lessons,ListSequences.ipynb
 Unit5_Strings_Lists,Projects,,Unit3_Chapter2_Project_InKeywordBooleans.ipynb
 Unit5_Strings_Lists,Projects,,Unit5_Chapter2_Project_ListsAndStrings.ipynb
 Unit5_Strings_Lists,Projects,,Unit5_Chapter2_Project_StringAndListMethods.ipynb
-Unit 6 Files and Command Line,Chapter1_File_Handling,Labs,Unit6_Chapter1_Lab_WorkingWithFiles.ipynb
-Unit 6 Files and Command Line,Chapter1_File_Handling,Lessons,CheckDeleteCheckpathFileexceptions.ipynb
-Unit 6 Files and Command Line,Chapter1_File_Handling,Lessons,FileReadlineStripMethods.ipynb
-Unit 6 Files and Command Line,Chapter1_File_Handling,Lessons,FileSystems.ipynb
-Unit 6 Files and Command Line,Chapter1_File_Handling,Lessons,FileWriteandSeekMethods.ipynb
-Unit 6 Files and Command Line,Chapter1_File_Handling,Lessons,Filereadlines&closeMethods.ipynb
-Unit 6 Files and Command Line,Chapter1_File_Handling,Lessons,FilesImportOpenRead.ipynb
-Unit 6 Files and Command Line,Chapter 2 Command line,Lessons,ScriptEnvCommandLineArgsVariableScopeDocstringPydocLab.ipynb 
-Unit 6 Files and Command Line,Chapter 2 Command line, Lessons, ScriptEnvironment&commandLineArguments.ipynb 
-Unit 6 Files and Command Line,Projects,,Unit6_Chapter1_Project_FileMethods.ipynb
-Unit7_Modules,Chapter1_BuiltIn_Modules,Lessons,PythonModulesDateandTimeLab.ipynb
+Unit6_Files,Chapter1_File_Handling,Labs,Unit6_Chapter1_Lab_WorkingWithFiles.ipynb
+Unit6_Files,Chapter1_File_Handling,Lessons,CheckDeleteCheckpathFileexceptions.ipynb
+Unit6_Files,Chapter1_File_Handling,Lessons,FileReadlineStripMethods.ipynb
+Unit6_Files,Chapter1_File_Handling,Lessons,FileSystems.ipynb
+Unit6_Files,Chapter1_File_Handling,Lessons,FileWriteandSeekMethods.ipynb
+Unit6_Files,Chapter1_File_Handling,Lessons,Filereadlines&closeMethods.ipynb
+Unit6_Files,Chapter1_File_Handling,Lessons,FilesImportOpenRead.ipynb
+Unit6_Files,Projects,,Unit6_Chapter1_Project_FileMethods.ipynb
+6Unit7_Modules,Chapter1_BuiltIn_Modules,Lessons,PythonModulesDateandTimeLab.ipynb
 Unit7_Modules,Chapter1_BuiltIn_Modules,Lessons,UsingPythonModules.ipynb
 Unit7_Modules,Chapter1_BuiltIn_Modules,Lessons,dateandtimemodules.ipynb
 Unit7_Modules,Chapter2_Date_Time_Pydoc,Lessons,DateandTimeArithmetic.ipynb
