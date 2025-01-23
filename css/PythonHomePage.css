@@ -1,0 +1,354 @@
+/* Root Variables for Python Page */
+:root {
+    --primary-bg-color: rgba(240, 248, 255, 0.95); /* Light AliceBlue theme */
+    --primary-text-color: #222; /* Darker text for better readability */
+    --header-bg-color: #283593; /* Deep Blue for Python page */
+    --accent-color: #FFD700; /* Gold for Python highlights */
+    --button-bg-color: #1E88E5; /* Vibrant Blue for buttons */
+    --button-hover-bg-color: #1565C0; /* Darker Blue for hover */
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--primary-text-color);
+    background-color: var(--primary-bg-color);
+    padding: 0;
+    margin: 0;
+}
+.home {
+    text-align: left;
+    border: 1px solid #69f5af;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(195, 5, 5, 0.838);
+    background-color: rgba(197, 245, 252, 0.466);
+    color: #201e1e;
+    background: linear-gradient(to top right, rgba(104, 235, 252, 0.297), rgba(186, 244, 252, 0.775)),
+                url('../assets/codeworkspacebackground.jpg') center/cover no-repeat;
+}
+.home h1{
+    text-align: center;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(to top right, #0f12537b, rgba(104, 235, 252, 0.308));
+    color: rgba(11, 10, 10, 0.805);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header .darkbutton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+header .darkbutton button {
+    background-color: var(--button-bg-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+header .darkbutton button:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+/* Welcome Banner */
+.welcome-banner {
+    background: linear-gradient(to right, #283593, #5c6bc0);
+    color: var(--accent-color);
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+#welcome-banner#python-lessons {
+    background: linear-gradient(to top right, #1e1e2f, #30475e), url('python-banner.jpg') center/cover no-repeat;
+    color: #FFD700; /* Python-like theme color */
+}
+.welcome-banner h1 span {
+    color: var(--button-bg-color);
+}
+
+.welcome-banner p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #FFF;
+}
+.ClassLinks nav button {
+    background-color: #e89519;
+    color: rgb(31, 32, 97);
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(104, 235, 252, 0.98);
+    transform: scale(1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ClassLinks nav button:hover {
+    background-color: #f7a52b;
+    color: rgba(104, 235, 252, 0.98);
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.feedback-form {
+    background-color: #f0f0f0de;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 80%;
+}
+
+/* Flex layout for alignment */
+.feedback-form form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Textarea (Feedback box) styling */
+.feedback-form textarea {
+    flex: 3;
+    height: 50px;
+    padding: 10px; /* Consistent padding to align text */
+    
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: ghostwhite; /* Ensure solid white background */
+    color: #333;
+    font-size: 1rem;
+    box-sizing: border-box;
+    line-height: 1.4; /* Reset line spacing for text alignment */
+    text-align: left; /* Ensure text starts on the left */
+}
+
+
+/* Input (Name box) styling */
+.feedback-form input {
+    flex: 1;
+    height: 50px; /* Match height to textarea */
+    padding: 10px; /* Consistent padding */
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: ghostwhite; /* Solid white background */
+    color: #333;
+    font-size: 1rem;
+    box-sizing: border-box;
+    text-align: left; /* Ensure text starts from the left */
+}
+
+
+/* Force placeholder visibility */
+.feedback-form textarea::placeholder,
+.feedback-form input::placeholder {
+    color: #3f3f3fd7 !important; /* Placeholder color */
+    opacity: 1 !important; /* Force visibility */
+    text-align: left; /* Align placeholder text to the left */
+}
+
+
+/* Submit button styling */
+.feedback-form button {
+    height: 50px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.feedback-form button:hover {
+    background-color: #45a049;
+}
+
+
+/* Lesson Containers */
+.lessons-list {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.unit h3 {
+    cursor: pointer;
+    background-color: var(--accent-color);
+    padding: 15px;
+    color: black;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.unit h3:hover {
+    background-color: #FFC107; /* Slightly lighter gold */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.chapter h4 {
+    cursor: pointer;
+    background-color: #F0F0F0;
+    padding: 10px;
+    margin: 10px 0;
+    border-left: 4px solid var(--accent-color);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chapter h4:hover {
+    background-color: #E8E8E8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h5 {
+    cursor: pointer;
+    background-color: #F9F9F9;
+    padding: 8px;
+    margin: 5px 0;
+    border-left: 4px dashed var(--accent-color);
+}
+
+.section h5:hover {
+    background-color: #FFFBEA;
+}
+
+/* File Links */
+.files-container a {
+    display: block;
+    margin: 5px 0;
+    padding: 5px 10px;
+    background-color: #E3F2FD; /* Light blue background */
+    color: var(--button-bg-color);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.files-container a:hover {
+    background-color: var(--button-bg-color);
+    color: white;
+}
+.unit h3, .chapter h4, .section h5, .files-container {
+    cursor: pointer;
+    background-color: #c5f5fce6;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.section-container, .lesson-details {
+    display: none;/* All chapters and lesson details start collapsed */
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+/* Feedback Form */
+.feedback-form {
+    background-color: #F5F5F5;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures consistent box model */
+}
+.search-bar {
+    
+    
+    box-shadow: 0 8px 15px rgba(84, 10, 10, 0.838);
+    text-align: center;
+    margin-bottom: 0px;
+    padding: 20px;
+    
+    background: linear-gradient(to top right, #8591d57d, #94b2bc8d);
+    
+    
+}
+.search-bar input {
+    padding: 10px;
+    width: 70%;
+    max-width: 400px;
+    border: 0.1px solid #020202;
+    box-shadow: 0 2px 2px #070707;
+    border-radius: 5px;
+}
+.search-bar button {
+    padding: 10px;
+    background-color: #ff9800;
+    color: rgb(15, 12, 85);
+    border: 0.1px solid #000000;
+    box-shadow: 0 2px 2px #080808;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.search-bar button:hover {
+    background-color: #e68a00;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--header-bg-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .welcome-banner h1 {
+        font-size: 1.8rem;
+    }
+
+    .welcome-banner p {
+        font-size: 1rem;
+    }
+
+    .unit h3, .chapter h4, .section h5 {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}

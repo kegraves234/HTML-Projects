@@ -287,32 +287,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function toggleSection(header) {
-        const section = header.nextElementSibling;
-        const icon = header.querySelector('.toggle-icon');
-
-        if (!section) return;
-
-        const isCollapsed = section.style.display === 'none' || section.style.display === '';
-
-        section.style.display = isCollapsed ? 'block' : 'none';
-        if (icon) icon.textContent = isCollapsed ? '▲' : '▼';
-
-        if (header.tagName === 'H3') {
-            const chapters = section.querySelectorAll('.chapter');
-            chapters.forEach(chapter => {
-                chapter.style.display = isCollapsed ? 'block' : 'none';
-                const lessons = chapter.querySelector('.lessons-container');
-                if (lessons) lessons.style.display = 'none'; // Keep lessons collapsed
-            });
-        } else if (header.tagName === 'H4') {
-            const lessons = section.querySelectorAll('.lesson');
-            lessons.forEach(lesson => {
-                lesson.style.display = isCollapsed ? 'block' : 'none';
-                const details = lesson.querySelector('.lesson-details');
-                if (details) details.style.display = 'none'; // Keep details collapsed
-            });
+        console.log('Toggling section:', header.textContent);
+    
+        const section = header.nextElementSibling; // Get the sibling to toggle
+        if (!section) {
+            console.error('No next sibling section found for header:', header.textContent);
+            return;
+        }
+    
+        // Toggle the 'show' class instead of setting 'display' inline
+        section.classList.toggle('show');
+    
+        // Debug: Log current classes
+        console.log('Section classes after toggle:', section.classList);
+    
+        // Update toggle icon
+        const toggleIcon = header.querySelector('.toggle-icon');
+        if (toggleIcon) {
+            toggleIcon.textContent = section.classList.contains('show') ? '▲' : '▼';
         }
     }
+    
 
     function saveProgress() {
         const checkboxes = document.querySelectorAll('.lesson-details input[type="checkbox"]');
@@ -354,7 +349,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     loadLessons('lessons-list-CSD', './uploads/CSD/CSD_Lessons.csv');
 
-    loadLessons('lessons-list-python', './uploads/Python/pythoncsv/Python_Lessons.csv')
+    
 
 });
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Python Programming Lessons - Kyle Graves</title>
-    <link rel="stylesheet" href="./css/TeacherWebsite.css">
+    <link rel="stylesheet" href="./css/PythonHomePage.css">
 </head>
 <body>
     <!-- Header Section -->
@@ -23,66 +23,39 @@
                         <button onclick="window.location.href='AP_CSPHomePage.html'">AP CSP</button>
                         <button onclick="window.location.href='/HTML-Projects/HTMLandCSS/aboutmehome.html'">About Me</button>
                     </nav>
-                    
                 </div>
             </div>
         </div>
     </header>
-   
 
     <!-- Main Content -->
     <div class="home">
         <!-- Search Section -->
         <div class="search-bar">
-            <input type="text" placeholder="Search Python lessons or topics..." /> <button>Search</button>
+            <input type="text" placeholder="Search Python lessons or topics..." />
+            <button>Search</button>
             <ul id="suggestions" class="suggestions-list"></ul>
-        
-
-        <!-- Lesson Plans -->
-        <h1>Weekly Lesson Plans</h1>
-        <div class="unit">
-            <h3>Unit 1 <span class="toggle-icon">▼</span></h3>
-            <div class="chapters-container" style="display: none;">
-                <div class="chapter">
-                    <h4>Chapter 1 <span class="toggle-icon">▼</span></h4>
-                    <div class="sections-container" style="display: none;">
-                        <div class="section">
-                            <h5>Lessons <span class="toggle-icon">▼</span></h5>
-                            <div class="files-container" style="display: none;">
-                                <a href="...">Lesson 1</a>
-                                <a href="...">Lesson 2</a>
-                            </div>
-                        </div>
-                        <div class="section">
-                            <h5>Labs <span class="toggle-icon">▼</span></h5>
-                            <div class="files-container" style="display: none;">
-                                <a href="...">Lab 1</a>
-                                <a href="...">Lab 2</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-        
+
+        <!-- Placeholder for Dynamic Lessons -->
+        <h1>Weekly Lesson Plans</h1>
+        <div id="lessons-list-python" class="lessons-list"></div>
         <button id="resetProgress" class="tracker-reset">Reset All Progress</button>
 
         <!-- Feedback Section -->
-            <div class="feedback-form">
-                <h3>Feedback</h3>
-                <form>
-                    <textarea placeholder="Share your thoughts or questions here..." rows="4"></textarea>
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
+        <div class="feedback-form">
+            <h3>Feedback</h3>
+            <form>
+                <textarea placeholder="Share your thoughts or questions here..." rows="4"></textarea>
+                <button type="submit">Submit</button>
+            </form>
         </div>
     </div>
+
     <footer>
         <p>&copy; 2024 Kyle Graves - Python Programming</p>
     </footer>
 
     <script src="./js/PythonHome.js"></script>
-
 </body>
 </html>
-

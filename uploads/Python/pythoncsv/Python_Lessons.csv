@@ -10,12 +10,12 @@ Unit1_Basics,Chapter 2 Strings Input,Lessons,ASCIIArt.ipynb
 Unit1_Basics,Chapter 2 Strings Input,Lessons,EscapeSequences.ipynb
 Unit1_Basics,Chapter 2 Strings Input,Lessons,Unit1_Section6_Input.ipynb
 Unit1_Basics,Chapter 2 Strings Input,Lessons,Unit1_Section7_PrintFormatting.ipynb
-Unit1_Basics,Unit 1 Projects,,
+Unit1_Basics, Unit Projects,Project Chapter 1,placeholder.ipynb
 Unit2_Functions,Chapter 1 Simple Functions,Lessons,Unit2Section1SimpleFunctions.ipynb
 Unit2_Functions,Chapter 1 Simple Functions,Lessons,Unit2Section2FunctionReturnandMultiParameters.ipynb
 Unit2_Functions,Chapter 1 Simple Functions,Lessons,Unit2_Labs_FunctionsArgumentsParameters.ipynb
 Unit2_Functions,Chapter 1 Simple Functions,Lessons,Unit2_Section3_FunctionsArgumentsandParameters.ipynb
-Unit2_Functions,Unit 2 Projects,,Unit2_Projects.ipynb
+Unit2_Functions,Chapter Unit 2 Projects,,Unit2_Projects.ipynb
 Unit3_Conditionals,Chapter1 Comparison Operators,Lessons,Unit3_Section1_ConditionalsBooleanStrings.ipynb
 Unit3_Conditionals,Chapter1 Comparison Operators,Lessons,Unit3_Section2_Conditionals_ComparisonOperators.ipynb
 Unit3_Conditionals,Chapter1 Comparison Operators,Lessons,Unit3_Section3_Conditionals_StringComparision.ipynb
@@ -63,7 +63,7 @@ Unit6_Files,Chapter1_File_Handling,Lessons,FileWriteandSeekMethods.ipynb
 Unit6_Files,Chapter1_File_Handling,Lessons,Filereadlines&closeMethods.ipynb
 Unit6_Files,Chapter1_File_Handling,Lessons,FilesImportOpenRead.ipynb
 Unit6_Files,Projects,,Unit6_Chapter1_Project_FileMethods.ipynb
-6Unit7_Modules,Chapter1_BuiltIn_Modules,Lessons,PythonModulesDateandTimeLab.ipynb
+Unit7_Modules,Chapter1_BuiltIn_Modules,Lessons,PythonModulesDateandTimeLab.ipynb
 Unit7_Modules,Chapter1_BuiltIn_Modules,Lessons,UsingPythonModules.ipynb
 Unit7_Modules,Chapter1_BuiltIn_Modules,Lessons,dateandtimemodules.ipynb
 Unit7_Modules,Chapter2_Date_Time_Pydoc,Lessons,DateandTimeArithmetic.ipynb
