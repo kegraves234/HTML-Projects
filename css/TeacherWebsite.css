@@ -752,7 +752,7 @@ ul {
 
 
 .chapter,.lesson, .lesson-details {
-    display: none; /* All chapters and lesson details start collapsed */
+    
     margin-left: 20px;
     font-size: 20px;
 }
