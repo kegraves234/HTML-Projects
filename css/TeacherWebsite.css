@@ -752,7 +752,7 @@ ul {
 
 
 .chapter,.lesson, .lesson-details {
-    
+    display: block;
     margin-left: 20px;
     font-size: 20px;
 }
