@@ -45,12 +45,16 @@
         <!-- Feedback Section -->
         <div class="feedback-form">
             <h3>Feedback</h3>
-            <form>
-                <textarea placeholder="Share your thoughts or questions here..." rows="4"></textarea>
+            <form action="https://formspree.io/f/xyzyqenw" method="POST">
+                <textarea 
+                    placeholder="Share your thoughts or questions here..." 
+                    rows="4" 
+                    name="feedback" 
+                    required></textarea>
+                <input type="text" name="username" placeholder="Your Name (optional)" />
                 <button type="submit">Submit</button>
             </form>
         </div>
-    </div>
 
     <footer>
         <p>&copy; 2024 Kyle Graves - Python Programming</p>
