@@ -1,11 +1,20 @@
-/* Root Variables for Python Page */
+/* Root Variables for Light and Dark Mode */
+/* Light Mode (default) */
 :root {
-    --primary-bg-color: rgba(240, 248, 255, 0.95); /* Light AliceBlue theme */
-    --primary-text-color: #222; /* Darker text for better readability */
-    --header-bg-color: #283593; /* Deep Blue for Python page */
-    --accent-color: #FFD700; /* Gold for Python highlights */
-    --button-bg-color: #1E88E5; /* Vibrant Blue for buttons */
-    --button-hover-bg-color: #1565C0; /* Darker Blue for hover */
+    --primary-bg-color: rgba(197, 245, 252, 0.836);
+    --primary-text-color: #333;
+    --header-bg-color: rgb(2, 56, 68);
+    --button-bg-color: #FF9800;
+    --button-hover-bg-color: #e68a00;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    --primary-bg-color: #121212;
+    --primary-text-color: #f5f5f5;
+    --header-bg-color: #1f1f1f;
+    --button-bg-color: #444;
+    --button-hover-bg-color: #555;
 }
 
 /* General Reset */
@@ -16,13 +25,19 @@
 }
 
 body {
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     color: var(--primary-text-color);
     background-color: var(--primary-bg-color);
     padding: 0;
     margin: 0;
 }
+
+p {
+    font-size: large;
+    font-weight: 580;
+}
+
 .home {
     text-align: left;
     border: 1px solid #69f5af;
@@ -35,6 +50,21 @@ body {
 }
 .home h1{
     text-align: center;
+}
+
+/* Dark Mode for Home Class */
+.home.dark-mode {
+    border: 1px solid #828583;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(9, 9, 9, 0.838);
+    color: #fdfbfb;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    background: linear-gradient(to bottom left, #33333338, #444),
+                url('../assests/codeworkspacebackground.jpg') center/cover no-repeat;
+}
+
+.home.dark-mode h2 {
+    color: white;
 }
 
 /* Header Styling */
@@ -75,26 +105,96 @@ header .darkbutton button:hover {
 
 /* Welcome Banner */
 .welcome-banner {
-    background: linear-gradient(to right, #283593, #5c6bc0);
-    color: var(--accent-color);
+    opacity: 0;
+    animation: fadeInSlide 1s ease-in-out forwards;
+    background: linear-gradient(to top right, rgba(111, 55, 55, 0.461), rgba(77, 142, 150, 0.459)), 
+            url('../assets/unsplashcodingbackground.jpg') center/cover no-repeat;
+    color: rgba(104, 235, 252, 0.98);
     padding: 50px 20px;
     text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 0;
+    box-shadow: 0 4px 15px rgba(195, 5, 5, 0.838);
 }
+
 #welcome-banner#python-lessons {
     background: linear-gradient(to top right, #1e1e2f, #30475e), url('python-banner.jpg') center/cover no-repeat;
     color: #FFD700; /* Python-like theme color */
 }
-.welcome-banner h1 span {
-    color: var(--button-bg-color);
-}
 
 .welcome-banner p {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #FFF;
+    color: #FF9800;
+    font-weight: bolder;
+    font-size: 20px;
 }
+
+.welcome-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Black overlay with transparency */
+    z-index: 1;
+}
+
+.welcome-content {
+    position: relative;
+    z-index: 2; /* Ensures content is above the overlay */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.welcome-banner h1 {
+    animation: fadeIn 1s ease-in-out;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.welcome-banner h1 span {
+    color: #FF9800;
+    font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+}
+
+.CSD_Overview {
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.ClassLinks {
+    margin-top: 10px;
+}
+
 .ClassLinks nav button {
     background-color: #e89519;
     color: rgb(31, 32, 97);
@@ -114,6 +214,70 @@ header .darkbutton button:hover {
     color: rgba(104, 235, 252, 0.98);
     transform: scale(1.1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.darkbutton {
+    position: relative; /* Ensure the button is positioned properly */
+    z-index: 10; /* Bring it to the front */
+}
+
+.darkbutton button {
+    background-color: rgb(31, 32, 97); /* Button color */
+    color: #e89519; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer; /* Ensures pointer shows on hover */
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(104, 235, 252, 0.98);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.darkbutton button:hover {
+    background-color: rgb(17, 18, 63); /* Hover color */
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Hover effect */
+}
+
+.toggle-icon {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.chapter h4:hover .toggle-icon,
+.lesson h5:hover .toggle-icon {
+    transform: scale(1.2);
+}
+
+.chapter.open h4 .toggle-icon,
+.lesson.open h5 .toggle-icon {
+    transform: rotate(180deg); /* Rotate when expanded */
+}
+
+body.dark-mode .welcome-banner {
+    background: linear-gradient(to right, #33333338, #444),
+    url('.//assets/unsplashcodingbackground.jpg') center/cover no-repeat;
+    box-shadow: 0 8px 15px rgba(9, 9, 9, 0.838);
+}
+
+body.dark-mode {
+    color: #fdfafa;
+}
+
+body.dark-mode header {
+    background: linear-gradient(to right, #33333338, #444);
+}
+
+body.dark-mode .lesson {
+    background-color: #33333376;
+    color: #060202;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode footer {
+    background: #111;
+    color: #ccc;
 }
 
 .feedback-form {
@@ -136,7 +300,6 @@ header .darkbutton button:hover {
     flex: 3;
     height: 50px;
     padding: 10px; /* Consistent padding to align text */
-    
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: ghostwhite; /* Ensure solid white background */
@@ -146,7 +309,6 @@ header .darkbutton button:hover {
     line-height: 1.4; /* Reset line spacing for text alignment */
     text-align: left; /* Ensure text starts on the left */
 }
-
 
 /* Input (Name box) styling */
 .feedback-form input {
@@ -163,7 +325,6 @@ header .darkbutton button:hover {
     text-align: left; /* Ensure text starts from the left */
 }
 
-
 /* Force placeholder visibility */
 .feedback-form textarea::placeholder,
 .feedback-form input::placeholder {
@@ -171,7 +332,6 @@ header .darkbutton button:hover {
     opacity: 1 !important; /* Force visibility */
     text-align: left; /* Align placeholder text to the left */
 }
-
 
 /* Submit button styling */
 .feedback-form button {
@@ -188,7 +348,6 @@ header .darkbutton button:hover {
 .feedback-form button:hover {
     background-color: #45a049;
 }
-
 
 /* Lesson Containers */
 .lessons-list {
@@ -340,7 +499,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .welcome-banner h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .welcome-banner p {
