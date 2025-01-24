@@ -29,11 +29,10 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    
     color: var(--primary-text-color);
-    
 }
-p{
+
+p {
     font-size: large;
     font-weight: 580;
 }
@@ -51,37 +50,31 @@ header h1 {
     font-size: 2rem;
 }
 
-/* General Styling */
 /* General Welcome Banner Styling */
 .welcome-banner {
     opacity: 0;
     animation: fadeInSlide 1s ease-in-out forwards;
     background: linear-gradient(to top right, rgba(111, 55, 55, 0.461), rgba(77, 142, 150, 0.459)), 
             url('../assets/unsplashcodingbackground.jpg') center/cover no-repeat;
-
     color: rgba(104, 235, 252, 0.98);
     padding: 50px 20px;
     text-align: center;
-    
     overflow: hidden;
     border-radius: 8px;
     margin: 0;
-    box-shadow: 0 4px 15px rgba(195, 5, 5, 0.838)
-
+    box-shadow: 0 4px 15px rgba(195, 5, 5, 0.838);
 }
-/* Banner for Python Lessons */
+
 #welcome-banner#python-lessons {
     background: linear-gradient(to top right, #1e1e2f, #30475e), url('python-banner.jpg') center/cover no-repeat;
     color: #FFD700; /* Python-like theme color */
 }
 
-.welcome-banner p{
-    color:#FF9800;
+.welcome-banner p {
+    color: #FF9800;
     font-weight: bolder;
     font-size: 20px;
 }
-
-
 
 .welcome-banner::after {
     content: '';
@@ -101,19 +94,13 @@ header h1 {
     margin: 0 auto;
 }
 
-
-
-/* Specific Background for Home Page */
-
-
-
-
 .welcome-banner h1 {
     animation: fadeIn 1s ease-in-out;
     font-size: 2.5rem;
     margin-bottom: 20px;
     font-family: 'Roboto', sans-serif;
 }
+
 @keyframes fadeInSlide {
     from {
         opacity: 0;
@@ -124,6 +111,7 @@ header h1 {
         transform: translateY(0);
     }
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -140,26 +128,21 @@ header h1 {
     font-weight: bold;
 }
 
+h2 {
+    text-align: center;
+}
 
-header h1 {
-    margin: 0;
-    font-size: 2rem;
-}
-h2{
+.CSD_Overview {
     text-align: center;
-}
-.CSD_Overview{
-    text-align: center;
-    margin-Left: 25%;
+    margin-left: 25%;
     margin-right: 25%;
 }
 
 .ClassLinks {
     margin-top: 10px;
 }
-/* buttons*/
+
 /* Dark mode button */
-/* Button Styling */
 .darkbutton {
     position: relative; /* Ensure the button is positioned properly */
     z-index: 10; /* Bring it to the front */
@@ -183,7 +166,6 @@ h2{
     transform: scale(1.1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Hover effect */
 }
-
 
 /* Styling for Buttons Inside the Banner */
 .ClassLinks nav button {
@@ -222,26 +204,18 @@ h2{
     transform: rotate(180deg); /* Rotate when expanded */
 }
 
-
-
 body.dark-mode .welcome-banner {
     background: linear-gradient(to right, #33333338, #444),
     url('.//assets/unsplashcodingbackground.jpg') center/cover no-repeat;
-    
     box-shadow: 0 8px 15px rgba(9, 9, 9, 0.838);
-    
 }
 
-
-body.dark-mode{
-    
+body.dark-mode {
     color: #fdfafa;
 }
 
 body.dark-mode header {
     background: linear-gradient(to right, #33333338, #444);
-
-    
 }
 
 body.dark-mode .lesson {
@@ -255,10 +229,6 @@ body.dark-mode footer {
     color: #ccc;
 }
 
-/* Adjust any other styles as needed */
-
-
-
 header {
     background: linear-gradient(to top right, #0f12537b, rgba(104, 235, 252, 0.308));
     color: rgba(11, 10, 10, 0.805);
@@ -266,13 +236,6 @@ header {
     padding: 0;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    
-}
-
-
-.welcome-banner {
-    margin: 0;
-    padding: 20px;
 }
 
 html, body {
@@ -281,20 +244,14 @@ html, body {
     box-sizing: border-box; /* Ensures consistent box model */
 }
 
-
-
 .search-bar {
-    
-    
     box-shadow: 0 8px 15px rgba(84, 10, 10, 0.838);
     text-align: center;
     margin-bottom: 0px;
     padding: 20px;
-    
     background: linear-gradient(to top right, #8591d57d, #94b2bc8d);
-    
-    
 }
+
 .search-bar input {
     padding: 10px;
     width: 70%;
@@ -303,6 +260,7 @@ html, body {
     box-shadow: 0 2px 2px #070707;
     border-radius: 5px;
 }
+
 .search-bar button {
     padding: 10px;
     background-color: #ff9800;
@@ -312,16 +270,17 @@ html, body {
     border-radius: 5px;
     cursor: pointer;
 }
+
 .search-bar button:hover {
     background-color: #e68a00;
 }
+
 .suggestions-list {
     list-style: none;
     margin: 0;
     padding: 0;
     position: absolute;
     background-color: white;
-    
     width: 70%;
     max-width: 400px;
     z-index: 10;
@@ -347,9 +306,11 @@ html, body {
     background: linear-gradient(to top right, rgba(104, 235, 252, 0.297), rgba(186, 244, 252, 0.775)),
                 url('../assets/codeworkspacebackground.jpg') center/cover no-repeat;
 }
-.home h1{
+
+.home h1 {
     text-align: center;
 }
+
 /* Dark Mode for Home Class */
 .home.dark-mode {
     border: 1px solid #828583;
@@ -359,15 +320,14 @@ html, body {
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
     background: linear-gradient(to bottom left, #33333338, #444),
                 url('../assests/codeworkspacebackground.jpg') center/cover no-repeat;
-    
 }
-.home.dark-mode h2{
+
+.home.dark-mode h2 {
     color: white;
 }
-.upcoming-events{
-    color: black;
-}
+
 .upcoming-events {
+    color: black;
     background-color: #f0f0f0;
     padding: 20px;
     margin: 20px auto;
@@ -376,19 +336,22 @@ html, body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
+
 .upcoming-events ul {
     list-style: none;
     padding: 0;
 }
+
 .upcoming-events li {
     margin: 10px 0;
     font-size: 1rem;
 }
-.home.dark-mode .upcoming-events{
+
+.home.dark-mode .upcoming-events {
     color: ghostwhite;
     background-color: #00000000;
 }
-/* General container styling */
+
 /* General container styling */
 .feedback-form {
     background-color: #f0f0f0de;
@@ -410,7 +373,6 @@ html, body {
     flex: 3;
     height: 50px;
     padding: 10px; /* Consistent padding to align text */
-    
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: ghostwhite; /* Ensure solid white background */
@@ -420,7 +382,6 @@ html, body {
     line-height: 1.4; /* Reset line spacing for text alignment */
     text-align: left; /* Ensure text starts on the left */
 }
-
 
 /* Input (Name box) styling */
 .feedback-form input {
@@ -437,7 +398,6 @@ html, body {
     text-align: left; /* Ensure text starts from the left */
 }
 
-
 /* Force placeholder visibility */
 .feedback-form textarea::placeholder,
 .feedback-form input::placeholder {
@@ -445,7 +405,6 @@ html, body {
     opacity: 1 !important; /* Force visibility */
     text-align: left; /* Align placeholder text to the left */
 }
-
 
 /* Submit button styling */
 .feedback-form button {
@@ -463,25 +422,17 @@ html, body {
     background-color: #45a049;
 }
 
-
-
-
-
 /* Main Content */
 main {
     padding: 20px;
     text-align: center;
 }
 
-
-
 .home h2 {
     font-size: 1.5rem;
     margin-bottom: 20px;
     color: #010101;
-    
 }
-
 
 .btn-explore {
     background-color: #FF9800;
@@ -511,7 +462,27 @@ main {
         font-size: 0.9rem;
         padding: 8px 15px;
     }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .ClassLinks button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    .darkbutton button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    .calendar {
+        width: 100%;
+        height: 500px;
+    }
 }
+
 .quick-links ul {
     padding: 10px;
     background-color: #34495e;
@@ -533,6 +504,7 @@ main {
     font-size: 26px;
     font-weight: 900;
 }
+
 .quick-links {
     margin: 20px auto;
     text-align: center;
@@ -542,11 +514,6 @@ main {
     margin: 10px 0;
 }
 
-
-
-
-
-
 .calendar {
     border: 1px solid #69f5af;
     border-radius: 12px;
@@ -554,51 +521,23 @@ main {
     overflow: hidden;
     margin: 20px auto;
     width: 90%;
-    
     max-width: 800px;
     height: 600px;
 }
-.home.dark-mode .calendar{
+
+.home.dark-mode .calendar {
     border: 1px solid #192720;
-    border-radius: 12px;
     box-shadow: 0 8px 15px rgba(48, 11, 11, 0.838);
-    overflow: hidden;
-    margin: 20px auto;
-    width: 90%;
-    
-    max-width: 800px;
-    height: 600px;
-   
 }
 
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    .ClassLinks button {
-        font-size: 0.9rem;
-        padding: 8px 12px;
-    }
-    .darkbutton button{
-        font-size: 0.9rem;
-        padding: 8px 12px;
-    }
-    .calendar {
-        width: 100%;
-        height: 500px;
-    }
-}
+/* Lesson Container for Grid Layout */
 #lesson-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically adjust columns */
     gap: 20px; /* Add spacing between grid items */
-    margin: 20px auto;  /*Center the container horizontally */
+    margin: 20px auto;  /* Center the container horizontally */
     padding: 20px;
     max-width: 1200px; /* Limit the overall width */
-    
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -638,7 +577,6 @@ main {
     appearance: none; /* Removes default styling for checkboxes */
     width: 20px;
     height: 20px;
-    
     cursor: pointer;
     background: #ffffff;
     border-radius: 5px; /* Optional for rounded checkboxes */
@@ -686,14 +624,8 @@ main {
 
 #resetProgress:hover {
     background-color: #e68a00;
-    color:#6481a9;
+    color: #6481a9;
 }
-
-/* Lesson Container for Grid Layout */
-
-
-
-
 
 .lesson-details h6 {
     margin-top: 10px;
@@ -701,21 +633,23 @@ main {
     font-weight: bold;
     color: #555;
 }
+
 .lesson-details a {
     margin-left: 20px;
     text-decoration: none;
     color: #007bff;
 }
+
 .lesson-details a:hover {
     text-decoration: underline;
     color: #0056b3;
 }
 
-
 .lesson-details input[type="checkbox"] {
     margin-right: 1px; /* Adjust the spacing as needed */
 }
-.lessons-list{
+
+.lessons-list {
     color: black;
 }
 
@@ -731,10 +665,12 @@ ul {
     list-style-type: none;
     padding: 0;
 }
+
 .unit, .chapter, .lesson {
     margin: 5px 0;
 }
-.unit h3, .chapter h4, .lesson h5{
+
+.unit h3, .chapter h4, .lesson h5 {
     font-size: 20px;
 }
 
@@ -747,10 +683,7 @@ ul {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
-
-
-.chapter,.lesson, .lesson-details {
+.chapter, .lesson, .lesson-details {
     display: block;
     margin-left: 20px;
     font-size: 20px;
@@ -765,27 +698,26 @@ ul {
     padding-left: 40px;
     margin: 10px;
 }
+
 /* Container for description and objectives */
 .description-objectives-container {
     display: flex; /* Makes content side by side */
     justify-content: space-between; /* Adds spacing between columns */
     gap: 20px; /* Adds space between the two sections */
     margin: 20px;
-    
 }
 
 /* Style for description section */
 .lesson-description {
     flex: 1; /* Takes half the space */
-    
     padding: 10px;
     border: 3px dotted #343434;
     border-radius: 5px;
     font-size: large;
     color: rgba(4, 3, 3, 0.764);
-    
 }
-.lesson-description h6{
+
+.lesson-description h6 {
     font-size: larger;
     font-weight: bolder;
     color: black;
@@ -794,17 +726,18 @@ ul {
 /* Style for objectives section */
 .lesson-objectives {
     flex: 1; /* Takes half the space */
-    
     padding: 10px;
     border: 3px dotted #343434;
     border-radius: 5px;
 }
-.lesson-objectives h6{
+
+.lesson-objectives h6 {
     font-size: larger;
     font-weight: bolder;
     color: black;
 }
-.lesson-objectives p{
+
+.lesson-objectives p {
     font-size: larger;
     color: #1d1d1df6;
 }
@@ -819,7 +752,7 @@ ul {
 
 .lesson-objectives li {
     margin-bottom: 5px; /* Adds spacing between list items */
-    color: rgba(4, 3, 3, 0.764)
+    color: rgba(4, 3, 3, 0.764);
 }
 
 h6 {
@@ -827,7 +760,8 @@ h6 {
     font-weight: bold;
     font-size: large;
 }
-.QOD{
+
+.QOD {
     margin-left: 5%;
     padding-left: 2px;
     margin-right: 5%;
@@ -835,20 +769,22 @@ h6 {
     border: 3px dotted #343434;
     border-radius: 5px;
 }
-.QOD h6{
+
+.QOD h6 {
     font-size: larger;
     font-weight: bolder;
     color: black;
     text-align: center;
     padding: 5px;
 }
-.QOD p{
+
+.QOD p {
     margin-left: 5%;
     margin-right: 5%;
     text-align: center;
     font-size: large;
     padding: 10px;
-    color: rgba(4, 3, 3, 0.764)
+    color: rgba(4, 3, 3, 0.764);
 }
 
 footer {
@@ -868,7 +804,6 @@ footer a {
 footer a:hover {
     color: #e68a00;
 }
- /* Ensuring all original code is included */
 
 footer {
     background-color: #333;
@@ -880,14 +815,17 @@ footer {
 .show {
     display: block !important;
 }
-
 @media (max-width: 768px) {
     .welcome-banner h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
-    nav button {
-        font-size: 0.9rem;
-        padding: 8px 12px;
+    .welcome-banner p {
+        font-size: 1rem;
+    }
+
+    .unit h3, .chapter h4, .section h5 {
+        font-size: 1rem;
+        padding: 10px;
     }
 }
