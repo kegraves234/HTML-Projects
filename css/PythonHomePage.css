@@ -84,9 +84,11 @@ header h1 {
 }
 
 header .darkbutton {
-    position: absolute;
+    position: relative;
     top: 10px;
-    right: 10px;
+    margin: 0 auto; /* Center horizontally */
+    display: flex;
+    justify-content: center;
 }
 
 header .darkbutton button {
@@ -231,13 +233,16 @@ h2 {
     cursor: pointer; /* Ensures pointer shows on hover */
     font-size: 1rem;
     box-shadow: 0 4px 8px rgba(104, 235, 252, 0.98);
+    transform: scale(1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .darkbutton button:hover {
     background-color: rgb(17, 18, 63); /* Hover color */
+    color: rgba(104, 235, 252, 0.98);
     transform: scale(1.1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Hover effect */
+    
 }
 
 .toggle-icon {
